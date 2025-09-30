@@ -13,6 +13,7 @@
   <!-- add plugins css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
   <!-- add plugins css end -->
 
   <link rel="stylesheet" href="css/style.css">
@@ -24,6 +25,8 @@
 
 <body>
 
+  <canvas id="mouseCanvas"></canvas>
+
   <header>
     <div class="container-fluid">
       <div class="row">
@@ -31,7 +34,7 @@
           <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
           <nav class="nav-menu nav-menu-header">
             <ul class="menu menu-header my-ul">
-              <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+              <li class="nav-item"><a href="index.html" class="nav-link active">Главная</a></li>
               <li class="nav-item"><a href="kitchen.html" class="nav-link">Кухня</a></li>
               <li class="nav-item"><a href="wardrobe.html" class="nav-link">Гардеробная</a></li>
               <li class="nav-item"><a href="tv-zones.html" class="nav-link">ТВ зоны</a></li>
@@ -75,15 +78,44 @@
     </div>
   </main>
 
-  <section class="">
+  <section class="category-section">
     <div class="container">
       <div class="row">
+        <div class="col-12">
+          <div class="category-section-item text-center" data-aos="fade-up">
+            <h3>кухни</h3>
+            <a href="kitchen.html" class="btn btn-dark">подробнее</a>
+            <a href="kitchen.html" class="category-image"><img src="img/category1.jpg" alt=""></a>
+          </div>
 
+          <div class="category-section-item text-center" data-aos="fade-up">
+            <h3>тв-зоны</h3>
+            <a href="tv-zones.html" class="btn btn-dark">подробнее</a>
+            <a href="tv-zones.html" class="category-image"><img src="img/category2.jpg" alt=""></a>
+          </div>
+
+          <div class="category-section-item text-center" data-aos="fade-up">
+            <h3>прихожие</h3>
+            <a href="hallway.html" class="btn btn-dark">подробнее</a>
+            <a href="hallway.html" class="category-image"><img src="img/category3.jpg" alt=""></a>
+          </div>
+
+          <div class="category-section-item text-center" data-aos="fade-up">
+            <h3>ванные</h3>
+            <a href="bathroom.html" class="btn btn-dark">подробнее</a>
+            <a href="bathroom.html" class="category-image"><img src="img/category4.jpg" alt=""></a>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <a href="catalog.html" class="btn btn-dark" data-aos="fade-up">весь каталог</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="">
+
+  <section class="tehnology-company p-120">
     <div class="container">
       <div class="row">
 
@@ -145,17 +177,18 @@
         <div class="col-12 col-lg-4 col-xl-3">
           <div class="footer-box">
             <p class="font-text">Телефон:</p>
-            <a href="tel:88000000000" class="phone">8 (800) 00-000-00</a>
-          </div>
+            <a href="tel:88000000000" class="phone h3">8 (800) 00-000-00</a>
 
-          <ul class="social-list my-ul">
-            <li><a href="#"><svg class="svg-icon">
-                  <use xlink:href="img/sprite.svg#vk-icon"></use>
-                </svg></a></li>
-            <li><a href="#"><svg class="svg-icon">
-                  <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
-                </svg></a></li>
-          </ul>
+
+            <ul class="social-list social-list-white my-ul">
+              <li><a href="#"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#vk-icon"></use>
+                  </svg></a></li>
+              <li><a href="#"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -166,6 +199,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <!-- add plugins js end-->
 
   <script src="js/common.js"></script>

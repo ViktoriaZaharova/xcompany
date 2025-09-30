@@ -20,6 +20,11 @@ header {
   margin: 0 auto;
 }
 
+.menu-header {
+  display: flex;
+  align-items: center;
+}
+
 .phone {
   margin: 0 24px 0 0;
   font-size: 18px;
