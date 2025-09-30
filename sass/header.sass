@@ -1,3 +1,28 @@
-@import "fonts"
 @import "vars"
 
+header
+  background: $white
+  padding: 13px 0
+  z-index: 10
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  
+.logo
+  @include d-flex
+  max-width: 221px
+  width: 100%
+
+.nav-menu-header
+  margin: 0 auto
+
+
+
+.phone
+  margin: 0 24px 0 0
+  font-size: 18px
+  font-weight: 600
+  color: $dark
+  &:hover
+    color: $dark-60      

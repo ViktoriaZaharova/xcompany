@@ -1,0 +1,40 @@
+.home {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 394px 0 423px;
+  background: url(../img/home-bg.jpg) no-repeat center;
+  background-size: cover;
+}
+.home::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(27.36% 17.78% at 50% 50%, #000000 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.logo-animate {
+  margin: auto;
+  max-width: 507px;
+  width: 100%;
+  animation: float 3.5s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

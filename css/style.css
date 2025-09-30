@@ -19,6 +19,13 @@
   src: url("../fonts/Montserrat/Montserrat-SemiBold.eot");
   src: url("../fonts/Montserrat/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
 }
+@font-face {
+  font-family: "AvenirNextCyr";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.eot");
+  src: url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.woff") format("woff"), url("../fonts/AvenirNextCyr/AvenirNextCyr-Regular.ttf") format("truetype");
+}
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -258,6 +265,91 @@ h4, .h4 {
   line-height: 110%;
   font-weight: normal;
   letter-spacing: 0.5px;
+}
+
+.font-text {
+  font-family: "AvenirNextCyr", sans-serif;
+}
+
+.p-120 {
+  padding: 120px 0;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+}
+.social-list li {
+  margin: 0 12px 0 0;
+}
+.social-list li:last-child {
+  margin: 0;
+}
+.social-list li a {
+  border: 1px solid #1D2126;
+  padding: 10px;
+  width: 52px;
+  height: 52px;
+  fill: #1D2126;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-list li a:hover {
+  background: #1D2126;
+  fill: #fff;
+}
+.social-list li a:focus {
+  background: rgba(25, 41, 57, 0.6);
+  border-color: rgba(25, 41, 57, 0.6);
+  fill: #fff;
+}
+.social-list li a:disabled {
+  opacity: 0.3;
+  border-color: #1D2126;
+  fill: #1D2126;
+  background: #fff;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.btn-burger {
+  border: 1px solid #1D2126;
+  padding: 10px;
+  width: 52px;
+  height: 52px;
+  margin: 0 0 0 12px;
+  fill: #1D2126;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-burger:hover {
+  background: #1D2126;
+  fill: #fff;
+}
+.btn-burger:focus {
+  background: rgba(25, 41, 57, 0.6);
+  border-color: rgba(25, 41, 57, 0.6);
+  fill: #fff;
+}
+.btn-burger:disabled {
+  opacity: 0.3;
+  border-color: #1D2126;
+  fill: #1D2126;
+  background: #fff;
+}
+
+.svg-icon-close {
+  display: none;
 }
 
 .slick-slider {

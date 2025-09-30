@@ -25,21 +25,52 @@
 <body>
 
   <header>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-12 d-flex alight-items-center">
+        <div class="col-12 d-flex align-items-center">
           <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
-
+          <nav class="nav-menu nav-menu-header">
+            <ul class="menu menu-header my-ul">
+              <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+              <li class="nav-item"><a href="kitchen.html" class="nav-link">Кухня</a></li>
+              <li class="nav-item"><a href="wardrobe.html" class="nav-link">Гардеробная</a></li>
+              <li class="nav-item"><a href="tv-zones.html" class="nav-link">ТВ зоны</a></li>
+              <li class="nav-item"><a href="tables.html" class="nav-link">Столы</a></li>
+              <li class="nav-item"><a href="hallway.html" class="nav-link">Прихожая</a></li>
+              <li class="nav-item"><a href="bathroom.html" class="nav-link">Ванная</a></li>
+              <li class="nav-item"><a href="outdoors.html" class="nav-link">OUTDOORS</a></li>
+              <li class="nav-item"><a href="patents.html" class="nav-link">Патенты</a></li>
+              <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+          </nav>
           <a href="tel:88000000000" class="phone">8 (800) 00-000-00</a>
+          <ul class="social-list my-ul">
+            <li><a href="#"><svg class="svg-icon">
+                  <use xlink:href="img/sprite.svg#vk-icon"></use>
+                </svg></a></li>
+            <li><a href="#"><svg class="svg-icon">
+                  <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+                </svg></a></li>
+          </ul>
+
+          <a href="#" class="btn-burger"><svg class="svg-icon svg-icon-burger">
+              <use xlink:href="img/sprite.svg#burger-icon"></use>
+            </svg>
+            <svg class="svg-icon svg-icon-close">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
   </header>
 
-  <main class="main">
+  <main class="home">
     <div class="container">
       <div class="row">
-
+        <div class="col-12">
+          <a href="index.html" class="logo-animate"><img src="img/logo-white.svg" alt=""></a>
+        </div>
       </div>
     </div>
   </main>
@@ -71,7 +102,14 @@
   <section class="callback-section p-120">
     <div class="container">
       <div class="row">
-
+        <div class="col-12 col-lg-7 col-xl-8">
+          <div class="callback-section__content">
+            <h2>Заказать обратный звонок</h2>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5 col-xl-4">
+          <div class="callback-section__image"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -89,7 +127,7 @@
           </ul>
         </div>
         <div class="col-12 col-lg-4 col-xl-4">
-          <nav class="nav-menu">
+          <nav class="nav-menu nav-menu-footer">
             <ul class="menu menu-footer my-ul">
               <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
               <li class="nav-item"><a href="kitchen.html" class="nav-link">Кухня</a></li>

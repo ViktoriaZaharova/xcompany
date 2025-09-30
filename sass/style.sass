@@ -162,7 +162,7 @@ ul, ol
 
 .row
   >*
-    padding: 0 12px  
+    padding: 0 12px
 
 h1, .h1
   font-weight: 600
@@ -178,9 +178,9 @@ h2, .h2
   font-size: 48px
   font-weight: 600
   line-height: 100%
-  letter-spacing: 1px  
+  letter-spacing: 1px
 
-.h2-big  
+.h2-big
   font-weight: 600
   font-size: 64px
   line-height: 100%
@@ -200,7 +200,7 @@ h4, .h4
   margin: 0
   font-weight: 600
   font-size: 24px
-  line-height: 100%  
+  line-height: 100%
 
 .box-text-big
   font-size: 24px
@@ -212,7 +212,66 @@ h4, .h4
   font-family: $font
 
 .p-120
-  padding: 120px 0    
+  padding: 120px 0
+
+.social-list
+  display: flex
+  align-items: center
+  li
+    margin: 0 12px 0 0
+    &:last-child
+      margin: 0
+    a
+      border: 1px solid $dark
+      padding: 10px
+      width: 52px
+      height: 52px
+      fill: $dark
+      @include d-flex
+      &:hover
+        background: $dark
+        fill: #fff
+      &:focus
+        background: $dark-60
+        border-color: $dark-60
+        fill: #fff
+      &:disabled
+        opacity: 0.3
+        border-color: $dark
+        fill: $dark
+        background: #fff
+
+.nav-menu
+  display: flex
+  align-items: center
+
+.menu
+  display: flex
+  align-items: center
+
+.btn-burger
+  border: 1px solid $dark
+  padding: 10px
+  width: 52px
+  height: 52px
+  margin: 0 0 0 12px
+  fill: $dark
+  @include d-flex
+  &:hover
+    background: $dark
+    fill: #fff
+  &:focus
+    background: $dark-60
+    border-color: $dark-60
+    fill: #fff
+  &:disabled
+    opacity: 0.3
+    border-color: $dark
+    fill: $dark
+    background: #fff
+
+.svg-icon-close
+  display: none
 
 // slick  
 .slick-slider
