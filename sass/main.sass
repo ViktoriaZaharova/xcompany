@@ -35,13 +35,12 @@
   100%
     transform: translateY(0)
 
-
 .category-section
   h3
     text-transform: uppercase
   .btn
-    margin: 19px auto 0  
-  
+    margin: 19px auto 0
+
 .category-image
   position: absolute
   z-index: -1
@@ -50,10 +49,133 @@
   bottom: 0
   left: 50%
   transform: translate(-50%,0)
-  @include d-flex  
+  @include d-flex
 
 .category-section-item
   position: relative
   z-index: 1
-  width: 100%  
+  width: 100%
   padding: 92px 0 483px
+
+// tehnology section
+.tehnology-section
+  .box-text
+    color: $dark-60  
+
+.tehnology-box
+  max-width: 420px
+  width: 100%
+  padding: 32px 32px 5px
+  border: 1px solid $dark-40
+  h4
+    span
+      margin: 16px 0
+      display: block 
+  .basic-principle
+    margin: 164px 0 0
+
+
+.basic-principle
+  margin: auto 0 0
+  padding: 0 0 0 150px
+  h3
+    margin: 0 0 16px
+  .box-text
+    color: $dark-60  
+  
+.tehnology-video
+  width: 100%
+  max-width: 875px
+  margin-left: auto
+  @include d-flex
+  video
+    width: 100%
+
+// innovation-section
+.innovation-section
+  padding: 105px 0
+  .basic-principle
+    padding: 0
+    .box-text
+      max-width: 585px
+  .btn
+    margin: auto 0 0  
+
+.innovation-content
+  width: 100%
+  height: 100%
+  display: flex
+  flex-direction: column
+  align-items: flex-start 
+  padding: 0 0 0 150px 
+  
+
+.image-wrapper
+  width: 100%
+  margin: 0 24px 0 0
+  @include d-flex
+  &:last-child
+    margin: 0
+  img
+    width: 100%  
+
+.images-gallery
+  width: 100%
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  .image-wrapper
+    max-width: 277px
+    height: 276px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+
+
+// video section  
+.video-wrapper
+  position: relative
+  z-index: 1
+
+.play-btn
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+  z-index: 2
+  width: 78px
+  height: 78px
+  fill: #fff
+  background: $dark
+  @include d-flex 
+  svg
+    width: 48px
+    height: 48px         
+
+
+
+
+// partners section
+.partners-section
+  padding: 120px 0 96px
+
+.partners-wrapper
+  width: 100%
+  display: flex
+  align-items: start
+  flex-wrap: wrap
+
+.partners-item
+  height: 80px
+  border: 1px solid $white-60
+  margin: 0 24px 24px 0
+  padding: 20px 24px
+  @include d-flex
+  &:hover
+    background: $dark-40
+  img
+    max-height: 100%
+  &:last-child
+    margin: 0

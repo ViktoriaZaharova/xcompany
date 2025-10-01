@@ -86,5 +86,56 @@ AOS.init({
   once: true     // анимация только 1 раз (не повторяется при скролле назад)
 });
 
+// video autoplay
+$(function () {
+  const startedVideos = new WeakSet(); // какие видео уже запускались
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        const video = entry.target;
+        if (!startedVideos.has(video)) {
+          $(video).get(0).play().catch(err => console.log("Автозапуск заблокирован:", err));
+          startedVideos.add(video);
+        }
+      }
+    });
+  }, { threshold: 0.3 });
+
+  $(".auto-video").each(function () {
+    observer.observe(this);
+  });
+});
+
+// video play button
+$(function () {
+  $(".video-wrapper").each(function () {
+    const $wrapper = $(this);
+    const $video = $wrapper.find(".manual-video");
+    const $btn = $wrapper.find(".play-btn");
+
+    // Запуск по клику
+    $btn.on("click", function () {
+      $video.get(0).play();
+      $btn.hide();
+    });
+
+    // Пауза → показать кнопку
+    $video.on("pause", function () {
+      $btn.show();
+    });
+
+    // Воспроизведение → скрыть кнопку
+    $video.on("play", function () {
+      $btn.hide();
+    });
+  });
+});
+
 // phone mask
 $('[name="phone"]').mask('+7 (999) 999-99-99');
+
+// fancybox
+Fancybox.bind("[data-fancybox]", {
+  // Your custom options
+});

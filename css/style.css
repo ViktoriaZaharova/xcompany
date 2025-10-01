@@ -273,6 +273,7 @@ h1, .h1 {
   letter-spacing: 1.6px;
   margin: 0;
   width: 100%;
+  text-transform: uppercase;
 }
 
 h2, .h2 {
@@ -282,6 +283,7 @@ h2, .h2 {
   font-weight: 600;
   line-height: 100%;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .h2-big {
@@ -299,6 +301,7 @@ h3, .h3 {
   font-weight: 600;
   font-size: 32px;
   line-height: 100%;
+  text-transform: uppercase;
 }
 
 h4, .h4 {
@@ -322,6 +325,35 @@ h4, .h4 {
 
 .p-120 {
   padding: 120px 0;
+}
+
+.mb-48 {
+  margin-bottom: 48px;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.bg-dark {
+  background: #1D2126;
+  color: #ffffff;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #5B6674 0%, #B3BCC4 15.25%, #68778A 37.38%, #435267 59.02%, #A2AEB9 78.28%, #20272E 90.04%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.text-indent {
+  text-indent: 75px;
 }
 
 .social-list {
@@ -349,8 +381,8 @@ h4, .h4 {
   fill: #fff;
 }
 .social-list li a:focus {
-  background: rgba(25, 41, 57, 0.6);
-  border-color: rgba(25, 41, 57, 0.6);
+  background: rgba(25, 41, 57, 0.8);
+  border-color: rgba(25, 41, 57, 0.8);
   fill: #fff;
 }
 .social-list li a:disabled {
@@ -370,8 +402,8 @@ h4, .h4 {
   fill: #fff;
 }
 .social-list-white li a:focus {
-  background: rgba(25, 41, 57, 0.6);
-  border-color: rgba(25, 41, 57, 0.6);
+  background: rgba(25, 41, 57, 0.8);
+  border-color: rgba(25, 41, 57, 0.8);
   fill: #fff;
 }
 .social-list-white li a:disabled {
@@ -420,8 +452,8 @@ h4, .h4 {
   fill: #fff;
 }
 .btn-burger:focus {
-  background: rgba(25, 41, 57, 0.6);
-  border-color: rgba(25, 41, 57, 0.6);
+  background: rgba(25, 41, 57, 0.8);
+  border-color: rgba(25, 41, 57, 0.8);
   fill: #fff;
 }
 .btn-burger:disabled {
