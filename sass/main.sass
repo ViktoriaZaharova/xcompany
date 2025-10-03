@@ -58,9 +58,11 @@
   padding: 92px 0 483px
 
 // tehnology section
-.tehnology-section
+.tehnology-company
   .box-text
-    color: $dark-60  
+    color: $dark-60
+  .basic-principle
+    margin: 164px 0 0
 
 .tehnology-box
   max-width: 420px
@@ -70,10 +72,7 @@
   h4
     span
       margin: 16px 0
-      display: block 
-  .basic-principle
-    margin: 164px 0 0
-
+      display: block
 
 .basic-principle
   margin: auto 0 0
@@ -81,8 +80,8 @@
   h3
     margin: 0 0 16px
   .box-text
-    color: $dark-60  
-  
+    color: $dark-60
+
 .tehnology-video
   width: 100%
   max-width: 875px
@@ -99,16 +98,15 @@
     .box-text
       max-width: 585px
   .btn
-    margin: auto 0 0  
+    margin: auto 0 0
 
 .innovation-content
   width: 100%
   height: 100%
   display: flex
   flex-direction: column
-  align-items: flex-start 
-  padding: 0 0 0 150px 
-  
+  align-items: flex-start
+  padding: 0 0 0 150px
 
 .image-wrapper
   width: 100%
@@ -117,7 +115,7 @@
   &:last-child
     margin: 0
   img
-    width: 100%  
+    width: 100%
 
 .images-gallery
   width: 100%
@@ -131,8 +129,6 @@
       width: 100%
       height: 100%
       object-fit: cover
-
-
 
 // video section  
 .video-wrapper
@@ -149,11 +145,74 @@
   height: 78px
   fill: #fff
   background: $dark
-  @include d-flex 
+  @include d-flex
   svg
     width: 48px
-    height: 48px         
+    height: 48px
 
+// advantages section
+.advantages-section
+  .box-text-title
+    max-width: 433px
+    margin-left: auto
+    color: $dark-60
+
+.advantages-row
+  display: flex
+  align-items: flex-end
+  padding: 48px 16px
+  border-bottom: 1px solid $gray-stroke
+  &:first-child
+    border-top: 1px solid $gray-stroke
+  .advantages-row-box
+    padding: 0 32px
+    &:first-child
+      width: 38%
+    &:nth-child(2)
+      width: 25%
+    &:last-child
+      width: 37%
+  .image-wrapper
+    width: 194px
+    height: 271px
+  .box-text
+    color: $dark-60
+
+// projects
+.project-card
+  width: 100%
+  &__img
+    width: 100%
+    height: 518px
+    overflow: hidden
+    @include d-flex
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__body
+    width: 100%
+    padding: 24px 0 0
+  &__title
+    color: $dark
+    &:hover
+      color: $dark-gray
+
+// package section
+.package-section
+  .tehnology-box
+    margin: 24px 0
+    padding: 32px
+    max-width: 588px
+    h4
+      font-weight: 500
+  .btn
+    margin-left: 80px
+
+.package-img
+  @include d-flex
+  img
+    width: 100%        
 
 
 
@@ -179,3 +238,27 @@
     max-height: 100%
   &:last-child
     margin: 0
+
+.cooperation-section
+  .box-text
+    max-width: 400px
+    margin-left: auto
+    color: $dark-60
+    .btn
+      margin: 24px 0 0
+
+.cooperation-image
+  margin: -150px auto 0
+  z-index: -1
+  position: relative
+
+.callback-section
+  .box-text-big
+    margin: 12px 0 0
+  &__image
+    border-left: 1px solid $gray-stroke
+    padding: 0 0 0 48px
+    @include d-flex  
+  .form-callback
+    margin: 48px auto 0
+    

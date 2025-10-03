@@ -85,24 +85,39 @@ input, textarea, select
   outline: none
   box-shadow: none
   appearance: none
-  padding: 0 15px
+  padding: 0 24px
   box-sizing: border-box
   font-family: $default-font
-  border: none
-  border-radius: 10px
+  border: 1px solid #fff
+  border-radius: 0
   width: 100%
   height: 54px
-  background: transparent
+  background: #fff
   color: #000
-  font-size: 15px
+  font-size: 18px
+  line-height: 22px
+  letter-spacing: 0.3px
   cursor: pointer
+  transition: .3s ease
   &::placeholder
-    color: #595959
-
+    color: $dark-40
   &:hover, &:focus
     outline: none
     box-shadow: none
+  &:hover
+    border: 1px solid $gray-stroke  
+    color: $dark
+    &::placeholder
+      color: $dark
+  &:focus
+    border-color: $dark 
+    color: $dark   
+  &:valid
+    background: #F0F0F0
+    border: 1px solid $gray-stroke 
+    color: $dark
 
+  
 input[type="radio"], input[type="checkbox"]
   width: auto
   height: auto
@@ -113,7 +128,7 @@ input[type="radio"], input[type="checkbox"]
 label
   display: block
   width: 100%
-  margin: 0 0 13px
+  margin: 0 0 16px
 
   &:last-child
     margin: 0
@@ -122,6 +137,74 @@ textarea
   resize: none
   padding: 12px 17px
   height: 103px
+
+.form-callback
+  max-width: 584px
+  width: 100%
+  margin: 0 auto
+  [type="submit"]
+    margin: 0 0 0 10px
+  h4
+    margin: 16px 0
+    color: $dark-60  
+
+.form-footer
+  width: 100%
+  display: flex
+  align-items: center
+
+.list-social-radio
+  width: 100%
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  font-size: 14px
+  line-height: 16px
+  letter-spacing: 0.3px
+
+.social-radio-item
+  flex: 1
+  margin: 0 16px 16px 0
+  display: flex
+  align-items: center
+  background: #fff
+  border: 1px solid $gray-stroke
+  padding: 16px 24px
+  cursor: pointer
+  transition: .3s ease
+  &:last-child
+    margin: 0 0 16px
+  input
+    display: none
+  &__custom
+    margin: 0 12px 0 0
+    width: 18px
+    height: 18px
+    min-width: 18px
+    border: 1px solid $dark
+    border-radius: 50%
+    position: relative
+    z-index: 1
+    cursor: pointer
+    &:after
+      content: ''
+      position: absolute
+      top: 50%
+      left: 50%
+      width: 10px
+      height: 10px
+      background: $dark
+      border-radius: 50%
+      transform: translate(-50%, -50%) scale(0)
+      transition: .3s ease
+  input:checked ~ .social-radio-item__custom:after
+    transform: translate(-50%, -50%) scale(1)
+  &:hover
+    border-color: $dark
+    color: $dark
+  &:focus
+    border-color: $dark-60  
+
 
 button, .btn
   outline: none
@@ -267,6 +350,9 @@ h4, .h4
   background: $dark
   color: $white
 
+.bg-light-gray
+  background: $light-gray  
+
 .text-gradient
   background: linear-gradient(90deg, #5B6674 0%, #B3BCC4 15.25%, #68778A 37.38%, #435267 59.02%, #A2AEB9 78.28%, #20272E 90.04%)
   -webkit-background-clip: text
@@ -276,6 +362,12 @@ h4, .h4
 
 .text-indent
   text-indent: 75px  
+
+.text-indent-2
+  text-indent: 35px  
+
+.d-block
+  display: flex   
 
 .social-list
   display: flex
@@ -376,25 +468,29 @@ h4, .h4
   position: relative
   display: flex
   align-items: flex-start
-  color: rgba(255, 255, 255, 0.5)
+  color: $dark-60
   font-size: 14px
-  margin: 15px 0 0
-  line-height: 1.14
+  line-height: 16px
+  letter-spacing: 0.3px
+  margin: 0
+  input
+    display: none
+    &:checked ~ .label-checkbox__custom
+      background: $dark url('../img/check-icon-white.svg') no-repeat center
+      background-size: 16px
+    &:checked ~ .label-checkbox__text
+      color: $dark  
 
-.inp-check
-  display: none
-
-.checkbox-custom
-  margin: 0 12px 0 0
-  position: relative
-  border-radius: 6px
-  background-color: #fff
-  width: 16px
-  height: 16px
-  min-width: 16px
-  cursor: pointer
-
-.inp-check:checked ~ .checkbox-custom
-  background: #fff url("../img/check-black.svg") no-repeat center
-  background-size: 8px
+  &__custom
+    position: relative
+    z-index: 1
+    cursor: pointer
+    transition: .3 ease
+    width: 18px
+    height: 18px
+    min-width: 18px
+    margin: 0 8px 0 0
+    border: 1px solid $dark-60
+  &:hover
+    color: $dark
 //checkbox my end

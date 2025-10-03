@@ -22,7 +22,7 @@
 
   const MAX_POINTS = 100;      // меньше точек — быстрее исчезает
   const CONNECT_DIST = 100;   // расстояние соединения
-  const FADE_STEP = 0.06;     // очень быстро исчезает
+  const FADE_STEP = 0.1;     // очень быстро исчезает
   const LINE_WIDTH = 0.1;     // ещё тоньше
 
   let points = [];
