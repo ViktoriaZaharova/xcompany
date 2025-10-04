@@ -51,3 +51,57 @@ footer
       color: #909499   
       &:hover
         color: $white 
+
+// modal
+.modal-dialog
+  max-width: 768px
+
+.modal-content
+  border-radius: 0
+  border: none
+  padding: 80px
+  background: #F7F7F7
+  .form-callback
+    margin: 32px auto 0
+    max-width: none
+
+.modal-header
+  position: relative
+  z-index: 1
+  flex-wrap: wrap
+  border: none
+  border-radius: 0
+  padding: 0 64px 0 0
+  margin: 0
+  width: 100%
+  .btn-close
+    position: absolute
+    right: 0
+    top: 0
+    z-index: 1
+    opacity: 1
+    background: transparent
+    padding: 10px
+    border-radius: 0
+    box-sizing: border-box
+    margin: 0
+    width: 52px
+    height: 52px
+    min-width: 52px
+    border: 1px solid $dark
+    fill: $dark
+    &:hover
+      background: $dark
+      fill: #fff
+    &:focus
+      background: $dark-60
+      fill: #fff
+      border-color: $dark-60
+  .box-text-big
+    margin: 12px 0 0
+    max-width: 470px
+
+
+.modal-body
+  padding: 0
+  width: 100%      

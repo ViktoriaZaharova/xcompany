@@ -685,6 +685,62 @@
     </div>
   </footer>
 
+  <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#callbackModal">callback modal</a>
+
+  <!-- Modal -->
+  <div class="modal fade" id="callbackModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h3 class="modal-title">Хотите оставить заявку или появились вопросы?</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+          <div class="box-text-big">
+            <p>Оставьте свои контактные данные, и мы с вами свяжемся</p>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <form method="post" class="form-callback">
+            <label><input type="text" name="name" placeholder="Имя" required></label>
+            <label><input type="text" name="phone" placeholder="Телефон" required></label>
+            <h4>Как с вами связаться?</h4>
+            <div class="list-social-radio">
+              <label class="social-radio-item">
+                <input type="radio" name="contact-method" value="whatsapp" checked>
+                <span class="social-radio-item__custom"></span>
+                <span class="radio-text">WhatsApp</span>
+              </label>
+              <label class="social-radio-item">
+                <input type="radio" name="contact-method" value="Telegram">
+                <span class="social-radio-item__custom"></span>
+                <span class="radio-text">Telegram</span>
+              </label>
+              <label class="social-radio-item">
+                <input type="radio" name="contact-method" value="Телефон">
+                <span class="social-radio-item__custom"></span>
+                <span class="radio-text">Телефон</span>
+              </label>
+            </div>
+
+            <div class="form-footer">
+              <label class="label-checkbox">
+                <input type="checkbox" name="checkbox">
+                <span class="label-checkbox__custom"></span>
+                <span class="label-checkbox__text">Нажимая кнопку "Отправить" вы соглашаетесь с политикой обработки
+                  персональных данных</span>
+              </label>
+              <button type="submit" class="btn btn-dark">Отправить</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- add plugins js-->
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
