@@ -262,3 +262,45 @@
   .form-callback
     margin: 48px auto 0
     
+.sustainability-wrapper
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+  position: relative
+  z-index: 1
+
+.sustainability-content
+  position: absolute
+  right: 0
+  top: 0
+  flex: 2
+  padding: 48px
+  max-width: 50%
+  width: 100%
+  .box-text
+    margin: 24px 0 0  
+    max-width: 650px
+
+.sustainability-item
+  flex: 1
+  min-height: 905px
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  border-right: 1px solid $gray-stroke
+  border-bottom: 1px solid $gray-stroke
+  &:last-child
+    border-right: none
+  &__img
+    display: none 
+  &__body
+    padding: 48px
+    width: 100%
+  h3
+    span
+      font-size: 80px
+      line-height: 75%  
+      font-weight: 500
+  .box-text
+    margin: 16px 0 0
+        

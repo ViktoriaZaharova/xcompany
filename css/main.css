@@ -325,3 +325,53 @@
 .callback-section .form-callback {
   margin: 48px auto 0;
 }
+
+.sustainability-wrapper {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.sustainability-content {
+  position: absolute;
+  right: 0;
+  top: 0;
+  flex: 2;
+  padding: 48px;
+  max-width: 50%;
+  width: 100%;
+}
+.sustainability-content .box-text {
+  margin: 24px 0 0;
+  max-width: 650px;
+}
+
+.sustainability-item {
+  flex: 1;
+  min-height: 905px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-right: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+.sustainability-item:last-child {
+  border-right: none;
+}
+.sustainability-item__img {
+  display: none;
+}
+.sustainability-item__body {
+  padding: 48px;
+  width: 100%;
+}
+.sustainability-item h3 span {
+  font-size: 80px;
+  line-height: 75%;
+  font-weight: 500;
+}
+.sustainability-item .box-text {
+  margin: 16px 0 0;
+}
