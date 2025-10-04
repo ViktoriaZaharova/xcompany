@@ -139,3 +139,69 @@ $('[name="phone"]').mask('+7 (999) 999-99-99');
 Fancybox.bind("[data-fancybox]", {
   // Your custom options
 });
+
+// menu active link
+$(document).ready(function() {
+  var currentUrl = window.location.pathname; // текущий путь, например /catalog.html
+
+  $('.menu-header a').each(function() {
+    var linkUrl = $(this).attr('href');
+
+    // Проверяем совпадение пути
+    if (linkUrl === currentUrl || (linkUrl === 'index.html' && currentUrl === '/')) {
+      $(this).addClass('active');
+    }
+  });
+});
+
+$(document).ready(function() {
+  var currentUrl = window.location.pathname; // текущий путь, например /catalog.html
+
+  $('.header-bottom-menu a').each(function() {
+    var linkUrl = $(this).attr('href');
+
+    // Проверяем совпадение пути
+    if (linkUrl === currentUrl || (linkUrl === 'index.html' && currentUrl === '/')) {
+      $(this).addClass('active');
+    }
+  });
+});
+
+// menu header-bottom
+$(function() {
+  // проверка (опционально)
+  if (typeof jQuery === 'undefined') {
+    console.error('jQuery не найден');
+    return;
+  }
+
+  var $btn = $('.btn-burger');
+  var $menu = $('.header-bottom');
+
+  // клик по кнопке — остановим всплытие, переключаем классы
+  $btn.on('click', function(e) {
+    e.stopPropagation();         // <- самое главное
+    e.preventDefault();      // используй только если это <a href="#"> и нужно блокировать переход
+    $(this).toggleClass('active');
+    $menu.toggleClass('open');
+  });
+
+  // клик внутри меню не закрывает
+  $menu.on('click', function(e) {
+    e.stopPropagation();         // <- нужно, чтобы document click не срабатывал
+  });
+
+  // клик вне — закрываем
+  $(document).on('click', function() {
+    $btn.removeClass('active');
+    $menu.removeClass('open');
+  });
+
+  // Esc — тоже закрываем
+  $(document).on('keydown', function(e) {
+    if (e.key === 'Escape' || e.keyCode === 27) {
+      $btn.removeClass('active');
+      $menu.removeClass('open');
+    }
+  });
+});

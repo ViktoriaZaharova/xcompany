@@ -421,6 +421,19 @@ h4, .h4
         fill: $dark
         background: #fff
 
+.social-list-white-border
+  li
+    a
+      fill: $white
+      border-color: $white
+      &:hover
+        background: $white
+        fill: $dark
+      &:focus
+        background: $white
+        border-color: $white
+        fill: $dark
+
 .nav-menu
   display: flex
   align-items: center
@@ -458,6 +471,13 @@ h4, .h4
     border-color: $dark
     fill: $dark
     background: #fff
+  &.active
+    .svg-icon-burger
+      display: none
+    .svg-icon-close
+      display: block 
+  svg
+    transition: .3s ease     
 
 .svg-icon-close
   display: none

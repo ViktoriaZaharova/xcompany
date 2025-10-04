@@ -1,6 +1,5 @@
 header {
   background: #ffffff;
-  padding: 13px 0;
   z-index: 10;
   position: fixed;
   left: 0;
@@ -23,6 +22,101 @@ header {
 .menu-header {
   display: flex;
   align-items: center;
+}
+.menu-header li a {
+  border-bottom: 1px solid transparent;
+  padding: 28px 0;
+}
+.menu-header li a.active, .menu-header li a:hover {
+  border-color: #1D2126;
+}
+
+.header-bottom {
+  display: none;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  background: #1D2126;
+  color: #fff;
+  padding: 140px 120px;
+}
+.header-bottom.open {
+  display: block;
+}
+.header-bottom .social-list {
+  margin: 0 0 48px;
+}
+
+.header-bottom-box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.header-bottom-box a {
+  color: #fff;
+}
+.header-bottom-box a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.header-bottom-menu {
+  max-width: 582px;
+  width: 100%;
+  font-weight: 500;
+}
+.header-bottom-menu > li {
+  margin: 0 0 24px;
+  width: 100%;
+}
+.header-bottom-menu > li:last-child {
+  margin: 0;
+}
+.header-bottom-menu > li > a {
+  width: 100%;
+  padding: 24px 0;
+  font-size: 32px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.6);
+  border-bottom: 1px solid transparent;
+}
+.header-bottom-menu > li > a:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+.header-bottom-menu > li > a.active {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.header-bottom-submenu {
+  padding: 0 0 0 32px;
+  margin: 16px 0 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+}
+.header-bottom-submenu li {
+  margin: 0 0 10px;
+}
+.header-bottom-submenu li:last-child {
+  margin: 0;
+}
+.header-bottom-submenu li a {
+  padding: 21px 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+.header-bottom-submenu li a:hover, .header-bottom-submenu li a.active {
+  color: #fff;
+}
+
+.phone-link {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 100%;
+  margin: 16px 0 0;
 }
 
 .phone {

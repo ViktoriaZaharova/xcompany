@@ -534,6 +534,20 @@ h4, .h4 {
   background: #fff;
 }
 
+.social-list-white-border li a {
+  fill: #ffffff;
+  border-color: #ffffff;
+}
+.social-list-white-border li a:hover {
+  background: #ffffff;
+  fill: #1D2126;
+}
+.social-list-white-border li a:focus {
+  background: #ffffff;
+  border-color: #ffffff;
+  fill: #1D2126;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -582,6 +596,15 @@ h4, .h4 {
   border-color: #1D2126;
   fill: #1D2126;
   background: #fff;
+}
+.btn-burger.active .svg-icon-burger {
+  display: none;
+}
+.btn-burger.active .svg-icon-close {
+  display: block;
+}
+.btn-burger svg {
+  transition: 0.3s ease;
 }
 
 .svg-icon-close {
