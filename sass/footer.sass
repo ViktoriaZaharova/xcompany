@@ -13,7 +13,7 @@ footer
     &:hover
       color: $white-60
   .social-list
-    margin: auto 0 0 0  
+    margin: auto 0 0 0
 
 .footer-box
   height: 100%
@@ -23,8 +23,8 @@ footer
     color: #909499
 
 .nav-menu-footer
-  margin: 0 auto  
-  
+  margin: 0 auto
+
 .menu-footer
   column-count: 2
   margin: 0 30px 0 auto
@@ -38,7 +38,7 @@ footer
       &:hover, &.active
         color: $gray-stroke
       &:focus
-        color: $light-gray  
+        color: $light-gray
 
 .menu-documents
   margin: 48px 0 0
@@ -48,9 +48,9 @@ footer
       margin: 0
     a
       text-decoration: underline
-      color: #909499   
+      color: #909499
       &:hover
-        color: $white 
+        color: $white
 
 // modal
 .modal-dialog
@@ -98,10 +98,37 @@ footer
       fill: #fff
       border-color: $dark-60
   .box-text-big
-    margin: 12px 0 0
+    margin: 0
     max-width: 470px
-
 
 .modal-body
   padding: 0
-  width: 100%      
+  width: 100%
+  margin: 12px 0 0
+
+.modal-dark
+  .modal-content
+    color: #fff
+    background: $dark
+    padding: 120px 80px
+  .modal-header
+    padding: 0
+    .btn-close
+      border-color: #fff
+      fill: #fff
+      &:hover
+        background: #fff
+        fill: $dark
+  .box-text-big
+    max-width: none
+    margin: 16px auto 0
+    color: $white-60      
+
+#thanksModal
+  .modal-dialog
+    max-width: 860px  
+  .modal-header
+    position: initial
+  .btn-close
+    top: 40px
+    right: 40px          
