@@ -1,13 +1,17 @@
 @import "vars"
 
 header
-  background: $white
-  // padding: 13px 0
   z-index: 10
   position: fixed
   left: 0
   top: 0
   width: 100%
+
+.header-top
+  width: 100%
+  z-index: 1000
+  background: #fff
+
 
 .logo
   @include d-flex
@@ -30,17 +34,22 @@ header
 .header-bottom
   display: none
   position: absolute
-  z-index: 3
+  z-index: 999
   left: 0
   top: 100%
   width: 100%
+  max-height: calc(100vh - 78px)
+  overflow-y: auto
   background: $dark
   color: #fff
   padding: 140px 120px
+  -webkit-overflow-scrolling: touch
   &.open
     display: block
   .social-list
     margin: 0 0 48px
+
+    
 
 .header-bottom-box
   height: 100%

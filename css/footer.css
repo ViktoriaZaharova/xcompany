@@ -124,12 +124,17 @@ footer .social-list {
 .modal-header .box-text-big {
   margin: 0;
   max-width: 470px;
+  width: 100%;
 }
 
 .modal-body {
   padding: 0;
   width: 100%;
   margin: 12px 0 0;
+}
+
+.modal-title {
+  line-height: normal;
 }
 
 .modal-dark .modal-content {

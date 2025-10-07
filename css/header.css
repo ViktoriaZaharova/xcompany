@@ -1,10 +1,15 @@
 header {
-  background: #ffffff;
   z-index: 10;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
+}
+
+.header-top {
+  width: 100%;
+  z-index: 1000;
+  background: #fff;
 }
 
 .logo {
@@ -34,13 +39,16 @@ header {
 .header-bottom {
   display: none;
   position: absolute;
-  z-index: 3;
+  z-index: 999;
   left: 0;
   top: 100%;
   width: 100%;
+  max-height: calc(100vh - 78px);
+  overflow-y: auto;
   background: #1D2126;
   color: #fff;
   padding: 140px 120px;
+  -webkit-overflow-scrolling: touch;
 }
 .header-bottom.open {
   display: block;

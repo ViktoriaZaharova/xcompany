@@ -65,11 +65,17 @@
   .nav-menu-header {
     display: none;
   }
-  header {
-    padding: 18px 0;
-  }
   header .logo {
     margin: 0 auto 0 0;
+  }
+  .header-top {
+    padding: 16px 0;
+  }
+  .header-bottom {
+    max-height: calc(100vh - 84px);
+  }
+  body {
+    padding: 84px 0 0;
   }
   .logo {
     max-width: 296px;
@@ -116,8 +122,14 @@
   .mb-48 {
     margin-bottom: 24px;
   }
+  .mb-64 {
+    margin-bottom: 24px;
+  }
   .h2-big {
     font-size: 40px;
+  }
+  .box-text-big {
+    font-size: 24px;
   }
   .home {
     padding: 175px 0;
@@ -127,14 +139,13 @@
   }
   .header-bottom {
     padding: 24px 40px;
-    overflow-y: auto;
   }
   .header-bottom-box {
     margin: 48px 0 0;
     padding: 48px 0 0;
     border-top: 1px solid #DBDBDB;
     width: 100%;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
   }
   .header-bottom-box a {
@@ -174,6 +185,9 @@
   }
   .category-section-item {
     padding: 70px 0 350px;
+  }
+  .images-gallery .image-wrapper {
+    height: 203px;
   }
   .innovation-content {
     margin: 0;
@@ -256,8 +270,76 @@
   .sustainability-item h3 span {
     font-size: 64px;
   }
+  .package-img {
+    margin: 24px 0 0;
+  }
+  .partners-section {
+    padding: 64px 0 40px;
+  }
+  .partners-item {
+    height: 70px;
+    padding: 14px 20px;
+  }
+  .cooperation-section .box-text {
+    max-width: none;
+    margin: 16px 0 0;
+  }
+  .cooperation-image {
+    margin: 16px auto 0;
+  }
+  .callback-section__image {
+    border: none;
+    padding: 0;
+    margin: 24px 0 0;
+    height: auto;
+  }
+  .form-callback {
+    max-width: none;
+  }
+  .callback-section .form-callback {
+    margin: 24px auto 0;
+  }
+  .footer-box {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 48px 0 0;
+  }
+  footer {
+    padding: 64px 0;
+  }
+  footer .logo {
+    margin: 0 auto;
+  }
+  footer .phone {
+    margin: 8px auto 0;
+    font-size: 32px;
+  }
+  footer .social-list {
+    margin: 48px auto 0;
+  }
+  .menu-documents {
+    margin: 48px auto;
+    text-align: center;
+  }
+  .menu-documents li a {
+    margin: 0 auto;
+  }
+  .menu-footer {
+    width: 100%;
+    text-align: center;
+  }
+  .menu-footer li {
+    margin: 0;
+  }
+  .menu-footer li a {
+    margin: 0 auto;
+  }
 }
 @media only screen and (max-width: 768px) {
+  h2, .h2 {
+    font-size: 32px;
+  }
   .h2-big {
     font-size: 32px;
     letter-spacing: 0;
@@ -265,8 +347,8 @@
   .header-top .phone, .header-top .social-list {
     display: none;
   }
-  header {
-    padding: 16px 0;
+  .header-bottom {
+    padding: 24px 28px;
   }
   .category-image {
     max-width: 546px;
@@ -284,5 +366,110 @@
   }
   .project-card__body {
     padding: 12px 0 0;
+  }
+  .category-section-item {
+    padding: 84px 0 226px;
+  }
+  .category-section-item .btn {
+    display: none;
+  }
+  .modal-content {
+    padding: 32px;
+  }
+  .modal-body {
+    margin: 24px 0 0;
+  }
+  .modal-content .form-callback {
+    margin: 0;
+  }
+  .modal-header .box-text-big {
+    margin: 12px 0 0;
+    max-width: none;
+    font-size: 16px;
+  }
+  .modal-dark .modal-content {
+    padding: 120px 24px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .form-footer {
+    flex-wrap: wrap;
+  }
+  .form-callback [type=submit] {
+    margin: 16px 0 0;
+    width: 100%;
+  }
+  .social-radio-item {
+    flex: none;
+    width: 100%;
+    margin: 0 0 16px;
+  }
+  .category-section-item {
+    padding: 64px 0 186px;
+  }
+  .modal-content .social-radio-item {
+    flex: none;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 16px 16px 0;
+  }
+  .modal-content .social-radio-item:last-child {
+    margin: 0 0 16px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .h2-big, h2, .h2 {
+    font-size: 28px;
+  }
+  .partners-item {
+    height: 60px;
+    padding: 10px 15px;
+    margin: 0 12px 12px 0;
+  }
+  .partners-item:last-child {
+    margin-right: 0;
+  }
+  .text-indent {
+    text-indent: 40px;
+  }
+  .text-indent-2 {
+    text-indent: 20px;
+  }
+  .package-section .tehnology-box {
+    padding: 26px;
+  }
+  .sustainability-item h3 span {
+    font-size: 50px;
+  }
+  .advantages-row h3 {
+    font-size: 26px;
+  }
+  .play-btn {
+    width: 60px;
+    height: 60px;
+  }
+  .category-section-item {
+    padding: 64px 0 126px;
+  }
+  footer .phone {
+    font-size: 24px;
+  }
+  .modal-content .social-radio-item {
+    width: 100%;
+    margin: 0 0 16px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .logo {
+    max-width: 260px;
+  }
+  .partners-item {
+    height: 44px;
+  }
+  .text-indent {
+    text-indent: 20px;
+  }
+  .text-indent-2 {
+    text-indent: 10px;
   }
 }
