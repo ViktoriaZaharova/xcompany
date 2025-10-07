@@ -184,6 +184,7 @@ $(function() {
     e.preventDefault();      // используй только если это <a href="#"> и нужно блокировать переход
     $(this).toggleClass('active');
     $menu.toggleClass('open');
+    $('body').toggleClass('no-scroll');
   });
 
   // клик внутри меню не закрывает
@@ -195,6 +196,7 @@ $(function() {
   $(document).on('click', function() {
     $btn.removeClass('active');
     $menu.removeClass('open');
+    $('body').removeClass('no-scroll');
   });
 
   // Esc — тоже закрываем
@@ -202,6 +204,7 @@ $(function() {
     if (e.key === 'Escape' || e.keyCode === 27) {
       $btn.removeClass('active');
       $menu.removeClass('open');
+      $('body').removeClass('no-scroll');
     }
   });
 });

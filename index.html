@@ -29,48 +29,50 @@
   <canvas id="mouseCanvas"></canvas>
 
   <header>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 d-flex align-items-center">
-          <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
-          <nav class="nav-menu nav-menu-header">
-            <ul class="menu menu-header my-ul">
-              <li class="nav-item"><a href="index.html" class="nav-link active">Главная</a></li>
-              <li class="nav-item"><a href="kitchen.html" class="nav-link">Кухня</a></li>
-              <li class="nav-item"><a href="wardrobe.html" class="nav-link">Гардеробная</a></li>
-              <li class="nav-item"><a href="tv-zones.html" class="nav-link">ТВ зоны</a></li>
-              <li class="nav-item"><a href="tables.html" class="nav-link">Столы</a></li>
-              <li class="nav-item"><a href="hallway.html" class="nav-link">Прихожая</a></li>
-              <li class="nav-item"><a href="bathroom.html" class="nav-link">Ванная</a></li>
-              <li class="nav-item"><a href="outdoors.html" class="nav-link">OUTDOORS</a></li>
-              <li class="nav-item"><a href="patents.html" class="nav-link">Патенты</a></li>
-              <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+    <div class="header-top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 d-flex align-items-center">
+            <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
+            <nav class="nav-menu nav-menu-header">
+              <ul class="menu menu-header my-ul">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Главная</a></li>
+                <li class="nav-item"><a href="kitchen.html" class="nav-link">Кухня</a></li>
+                <li class="nav-item"><a href="wardrobe.html" class="nav-link">Гардеробная</a></li>
+                <li class="nav-item"><a href="tv-zones.html" class="nav-link">ТВ зоны</a></li>
+                <li class="nav-item"><a href="tables.html" class="nav-link">Столы</a></li>
+                <li class="nav-item"><a href="hallway.html" class="nav-link">Прихожая</a></li>
+                <li class="nav-item"><a href="bathroom.html" class="nav-link">Ванная</a></li>
+                <li class="nav-item"><a href="outdoors.html" class="nav-link">OUTDOORS</a></li>
+                <li class="nav-item"><a href="patents.html" class="nav-link">Патенты</a></li>
+                <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+              </ul>
+            </nav>
+            <a href="tel:88000000000" class="phone">8 (800) 00-000-00</a>
+            <ul class="social-list my-ul">
+              <li><a href="#"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#vk-icon"></use>
+                  </svg></a></li>
+              <li><a href="#"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+                  </svg></a></li>
             </ul>
-          </nav>
-          <a href="tel:88000000000" class="phone">8 (800) 00-000-00</a>
-          <ul class="social-list my-ul">
-            <li><a href="#"><svg class="svg-icon">
-                  <use xlink:href="img/sprite.svg#vk-icon"></use>
-                </svg></a></li>
-            <li><a href="#"><svg class="svg-icon">
-                  <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
-                </svg></a></li>
-          </ul>
 
-          <a href="#" class="btn-burger"><svg class="svg-icon svg-icon-burger">
-              <use xlink:href="img/sprite.svg#burger-icon"></use>
-            </svg>
-            <svg class="svg-icon svg-icon-close">
-              <use xlink:href="img/sprite.svg#close-icon"></use>
-            </svg>
-          </a>
+            <a href="#" class="btn-burger"><svg class="svg-icon svg-icon-burger">
+                <use xlink:href="img/sprite.svg#burger-icon"></use>
+              </svg>
+              <svg class="svg-icon svg-icon-close">
+                <use xlink:href="img/sprite.svg#close-icon"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
     <div class="header-bottom">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12 col-md-6 col-lg-4 col-xl-5 order-lg-1">
+          <div class="col-12 col-md-6 col-lg-5 col-xl-5 order-lg-1">
             <ul class="header-bottom-menu my-ul">
               <li><a href="index.html" class="active">Главная</a></li>
               <li><a href="about.html">О компании</a></li>
@@ -96,7 +98,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-12 col-lg-4 col-xl-3">
+          <div class="col-12 col-lg-3 col-xl-3">
             <div class="header-bottom-box">
               <ul class="social-list social-list-white-border my-ul">
                 <li><a href="#"><svg class="svg-icon">
@@ -205,11 +207,21 @@
   <div class="innovation-section">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 col-lg-6">
+        <div class="col-12 d-block d-lg-none mb-32">
+          <div class="basic-principle">
+            <h3>инновации</h3>
+            <div class="box-text">
+              <p>Мы внедряем инновационные технологии, которые <br>способствуют созданию экологически чистой продукции
+                с
+                минимальным воздействием на природу</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mb-lg-16">
           <a href="img/innovation1.jpg" data-fancybox="innovation-gallery" class="image-wrapper"><img
               src="img/innovation1.jpg" alt=""></a>
         </div>
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-6 order-lg-1">
           <div class="innovation-content">
             <div class="images-gallery justify-content-end">
               <a href="img/innovation2.jpg" data-fancybox="innovation-gallery" class="image-wrapper"><img
@@ -218,7 +230,7 @@
                   src="img/innovation3.jpg" alt=""></a>
             </div>
 
-            <div class="basic-principle">
+            <div class="basic-principle d-none d-lg-block">
               <h3>инновации</h3>
               <div class="box-text">
                 <p>Мы внедряем инновационные технологии, которые <br>способствуют созданию экологически чистой продукции
@@ -226,6 +238,7 @@
                   минимальным воздействием на природу</p>
               </div>
             </div>
+
           </div>
         </div>
       </div>
@@ -236,7 +249,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 col-lg-6">
-          <div class="innovation-content">
+          <div class="innovation-content mb-lg-24">
             <div class="images-gallery">
               <a href="img/innovation4.jpg" data-fancybox="innovation-gallery" class="image-wrapper"><img
                   src="img/innovation4.jpg" alt=""></a>
@@ -526,7 +539,7 @@
             <h4>Для защиты нашей продукции от повреждений при транспортировке,
               мы доставляем товары в заводской упаковке от производителя</h4>
           </div>
-          <a href="delivery.html" class="btn btn-dark">Узнать больше об упаковке и доставке</a>
+          <a href="delivery.html" class="btn btn-dark"><span class="d-none d-lg-block">Узнать больше об упаковке и доставке</span><span class="d-block d-lg-none">Узнать больше</span></a>
         </div>
         <div class="col-12 col-lg-6">
           <div class="package-img"><img src="img/package-img.jpg" alt=""></div>
@@ -742,7 +755,7 @@
     </div>
   </div>
 
-    <div class="modal fade modal-dark" id="thanksModal" tabindex="-1" aria-hidden="true">
+  <div class="modal fade modal-dark" id="thanksModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
 

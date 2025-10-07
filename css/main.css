@@ -114,9 +114,13 @@
 }
 .innovation-section .basic-principle .box-text {
   max-width: 585px;
+  margin: 0 0 auto;
 }
 .innovation-section .btn {
-  margin: auto 0 0;
+  margin: 24px 0 0;
+}
+.innovation-section .images-gallery {
+  margin: 0 0 24px;
 }
 
 .innovation-content {
