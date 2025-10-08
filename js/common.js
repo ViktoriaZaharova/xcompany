@@ -208,3 +208,51 @@ $(function() {
     }
   });
 });
+
+// animate title
+$(document).ready(function () {
+  function animateLetters($element) {
+    var text = $element.text();
+    $element.html('');
+
+    // Разбиваем текст на отдельные буквы
+    for (var i = 0; i < text.length; i++) {
+      var char = text[i] === ' ' ? '&nbsp;' : text[i];
+      $element.append('<span>' + char + '</span>');
+    }
+
+    $(window).on('scroll load', function () {
+      var top = $element.offset().top;
+      var bottom = top + $element.outerHeight();
+      var scrollTop = $(window).scrollTop();
+      var windowBottom = scrollTop + $(window).height();
+
+      if (bottom > scrollTop && top < windowBottom) {
+        var $letters = $element.find('span');
+
+        // 1️⃣ Первая фаза — поочерёдно до полупрозрачности
+        $letters.each(function (i) {
+          var $span = $(this);
+          setTimeout(function () {
+            $span.addClass('half');
+          }, i * 420); // естественный темп (между 240 и 480)
+        });
+
+        // 2️⃣ Вторая фаза — до полного проявления, быстрее
+        setTimeout(function () {
+          $letters.each(function (i) {
+            var $span = $(this);
+            setTimeout(function () {
+              $span.removeClass('half').addClass('visible');
+            }, i * 200); // быстрее вторая волна
+          });
+        }, $letters.length * 420 + 1600); // пауза между фазами немного короче
+      }
+    });
+  }
+
+  $('.anim-letters').each(function () {
+    animateLetters($(this));
+  });
+});
+

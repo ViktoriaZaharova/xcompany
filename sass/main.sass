@@ -15,10 +15,14 @@
     top: 0
     width: 100%
     height: 100%
-    z-index: -1
+    z-index: 2
     background: radial-gradient(27.36% 17.78% at 50% 50%, #000000 0%, rgba(0, 0, 0, 0) 100%)
+  .container, .container-fluid
+    position: relative
+    z-index: 3
 
 .logo-animate
+
   margin: auto
   max-width: 507px
   width: 100%
@@ -56,6 +60,9 @@
   z-index: 1
   width: 100%
   padding: 92px 0 483px
+
+.category-section-item-2
+  padding: 115px 0 606px
 
 // tehnology section
 .tehnology-company
@@ -101,7 +108,7 @@
   .btn
     margin: 24px 0 0
   .images-gallery
-    margin: 0 0 24px  
+    margin: 0 0 24px
 
 .innovation-content
   width: 100%
@@ -200,6 +207,12 @@
     color: $dark
     &:hover
       color: $dark-gray
+  .box-text
+    color: $dark-40    
+
+.projects-section
+  .box-text-big
+    color: $dark-60
 
 // package section
 .package-section
@@ -215,9 +228,7 @@
 .package-img
   @include d-flex
   img
-    width: 100%        
-
-
+    width: 100%
 
 // partners section
 .partners-section
@@ -263,10 +274,10 @@
     height: 100%
     border-left: 1px solid $gray-stroke
     padding: 0 0 0 48px
-    @include d-flex  
+    @include d-flex
   .form-callback
     margin: 48px auto 0
-    
+
 .sustainability-wrapper
   display: flex
   align-items: stretch
@@ -283,7 +294,7 @@
   max-width: 50%
   width: 100%
   .box-text
-    margin: 24px 0 0  
+    margin: 24px 0 0
     max-width: 650px
 
 .sustainability-item
@@ -297,15 +308,36 @@
   &:last-child
     border-right: none
   &__img
-    display: none 
+    display: none
   &__body
     padding: 48px
     width: 100%
   h3
     span
       font-size: 80px
-      line-height: 75%  
+      line-height: 75%
       font-weight: 500
   .box-text
     margin: 16px 0 0
-        
+
+// catalog page
+.home-catalog
+  background: url('../img/catalog-home-bg.jpg') no-repeat center
+  background-size: cover
+  padding: 204px 0
+  &::before
+    background: radial-gradient(50% 50% at 50% 50%, #1D2126 0%, rgba(29, 33, 38, 0.4) 100%)
+    
+
+
+// home-page
+.home-page
+  padding: 222px 0
+  color: #fff
+  &::before
+    background: radial-gradient(50% 50% at 50% 50%, #1D2126 0%, rgba(29, 33, 38, 0.4) 100%)
+
+.home-kitchen
+  background: url('../img/kitchen-home-bg.jpg') no-repeat center
+  background-size: cover  
+

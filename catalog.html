@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xcompany</title>
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- add plugins css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/fancybox.css">
+  <!-- add plugins css end -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+
+  <canvas id="mouseCanvas"></canvas>
+
+  <header>
+    <div class="header-top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 d-flex align-items-center">
+            <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
+            <nav class="nav-menu nav-menu-header">
+              <ul class="menu menu-header my-ul">
+                <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="kitchen.html" class="nav-link">Кухня</a></li>
+                <li class="nav-item"><a href="wardrobe.html" class="nav-link">Гардеробная</a></li>
+                <li class="nav-item"><a href="tv-zones.html" class="nav-link">ТВ зоны</a></li>
+                <li class="nav-item"><a href="tables.html" class="nav-link">Столы</a></li>
+                <li class="nav-item"><a href="hallway.html" class="nav-link">Прихожая</a></li>
+                <li class="nav-item"><a href="bathroom.html" class="nav-link">Ванная</a></li>
+                <li class="nav-item"><a href="outdoors.html" class="nav-link">OUTDOORS</a></li>
+                <li class="nav-item"><a href="patents.html" class="nav-link">Патенты</a></li>
+                <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+              </ul>
+            </nav>
+            <a href="tel:88000000000" class="phone">8 (800) 00-000-00</a>
+            <ul class="social-list my-ul">
+              <li><a href="#"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#vk-icon"></use>
+                  </svg></a></li>
+              <li><a href="#"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+                  </svg></a></li>
+            </ul>
+
+            <a href="#" class="btn-burger"><svg class="svg-icon svg-icon-burger">
+                <use xlink:href="img/sprite.svg#burger-icon"></use>
+              </svg>
+              <svg class="svg-icon svg-icon-close">
+                <use xlink:href="img/sprite.svg#close-icon"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-5 col-xl-5 order-lg-1">
+            <ul class="header-bottom-menu my-ul">
+              <li><a href="index.html" class="active">Главная</a></li>
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="package.html">Упаковка и доставка</a></li>
+              <li><a href="partners.html">Дизайнерам и партнерам</a></li>
+              <li><a href="projects.html">Реализованные проекты</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3 offset-xl-1 order-lg-1">
+            <ul class="header-bottom-menu my-ul">
+              <li><a href="catalog.html">Каталог</a>
+
+                <ul class="header-bottom-submenu my-ul">
+                  <li><a href="kitchen.html">Кухни</a></li>
+                  <li><a href="wardrobe.html">Гардеробные</a></li>
+                  <li><a href="tv-zones.html">ТВ зоны</a></li>
+                  <li><a href="tables.html">Столы</a></li>
+                  <li><a href="hallway.html">Прихожая</a></li>
+                  <li><a href="bathroom.html">Ванная</a></li>
+                  <li><a href="outdoors.html">OUTDOORS</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-3 col-xl-3">
+            <div class="header-bottom-box">
+              <ul class="social-list social-list-white-border my-ul">
+                <li><a href="#"><svg class="svg-icon">
+                      <use xlink:href="img/sprite.svg#vk-icon"></use>
+                    </svg></a></li>
+                <li><a href="#"><svg class="svg-icon">
+                      <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+                    </svg></a></li>
+              </ul>
+
+              <a href="mailto:xcompany.pro@mail.ru" class="mail">xcompany.pro@mail.ru</a>
+              <a href="tel:+78000000000" class="phone-link">8 (800) 00-000-00</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="home home-catalog">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <a href="index.html" class="logo-animate"><img src="img/logo-white.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="category-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="category-section-item text-center" data-aos="fade-up">
+            <h3>кухни</h3>
+            <a href="kitchen.html" class="btn btn-dark">подробнее</a>
+            <a href="kitchen.html" class="category-image"><img src="img/category1.jpg" alt=""></a>
+          </div>
+
+          <div class="category-section-item text-center" data-aos="fade-up">
+            <h3>тв-зоны</h3>
+            <a href="tv-zones.html" class="btn btn-dark">подробнее</a>
+            <a href="tv-zones.html" class="category-image"><img src="img/category2.jpg" alt=""></a>
+          </div>
+
+          <div class="category-section-item text-center" data-aos="fade-up">
+            <h3>прихожие</h3>
+            <a href="hallway.html" class="btn btn-dark">подробнее</a>
+            <a href="hallway.html" class="category-image"><img src="img/category3.jpg" alt=""></a>
+          </div>
+
+          <div class="category-section-item text-center" data-aos="fade-up">
+            <h3>ванные</h3>
+            <a href="bathroom.html" class="btn btn-dark">подробнее</a>
+            <a href="bathroom.html" class="category-image"><img src="img/category4.jpg" alt=""></a>
+          </div>
+
+          <div class="category-section-item category-section-item-2  text-center" data-aos="fade-up">
+            <h3>гардеробные</h3>
+            <a href="wardrobe.html" class="btn btn-dark">подробнее</a>
+            <a href="wardrobe.html" class="category-image"><img src="img/category5.jpg" alt=""></a>
+          </div>
+
+          <div class="category-section-item text-center" data-aos="fade-up">
+            <h3>столы</h3>
+            <a href="tables.html" class="btn btn-dark">подробнее</a>
+            <a href="tables.html" class="category-image"><img src="img/category6.jpg" alt=""></a>
+          </div>
+
+          <div class="category-section-item text-center" data-aos="fade-up">
+            <h3>Outdoors</h3>
+            <a href="outdoors.html" class="btn btn-dark">подробнее</a>
+            <a href="outdoors.html" class="category-image"><img src="img/category7.jpg" alt=""></a>
+          </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </section>
+
+
+  <section class="tehnology-company p-120">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-10">
+          <h2 class="h2-big text-indent mb-64">Технологии и ценности
+            компании <span class="text-gradient">XCOMPANY</span></h2>
+        </div>
+      </div>
+
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6 col-xl-5">
+          <div class="tehnology-box">
+            <h4>В основе наших решений лежит уникальная, запатентованная <span
+                class="text-gradient text-uppercase">СИСТЕМА X</span></h4>
+            <div class="box-text">
+              <p>Она позволяет собирать корпусную мебель полностью из алюминия. Открывая новые горизонты для создания
+                функциональных и стильных indoor/outdoor-решений</p>
+            </div>
+          </div>
+
+          <div class="basic-principle">
+            <h3>Основной принцип:</h3>
+            <div class="box-text">
+              <p><strong>Cистема X</strong> предлагает потребителям новый, качественный и долговечный продукт</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-7">
+          <div class="tehnology-video">
+            <video class="auto-video" muted loop playsinline autoplay>
+              <source src="video1.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="innovation-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 d-block d-lg-none mb-32">
+          <div class="basic-principle">
+            <h3>инновации</h3>
+            <div class="box-text">
+              <p>Мы внедряем инновационные технологии, которые <br>способствуют созданию экологически чистой продукции
+                с
+                минимальным воздействием на природу</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mb-lg-16">
+          <a href="img/innovation1.jpg" data-fancybox="innovation-gallery" class="image-wrapper"><img
+              src="img/innovation1.jpg" alt=""></a>
+        </div>
+        <div class="col-12 col-lg-6 order-lg-1">
+          <div class="innovation-content">
+            <div class="images-gallery justify-content-end">
+              <a href="img/innovation2.jpg" data-fancybox="innovation-gallery" class="image-wrapper"><img
+                  src="img/innovation2.jpg" alt=""></a>
+              <a href="img/innovation3.jpg" data-fancybox="innovation-gallery" class="image-wrapper"><img
+                  src="img/innovation3.jpg" alt=""></a>
+            </div>
+
+            <div class="basic-principle d-none d-lg-block">
+              <h3>инновации</h3>
+              <div class="box-text">
+                <p>Мы внедряем инновационные технологии, которые <br>способствуют созданию экологически чистой продукции
+                  с
+                  минимальным воздействием на природу</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="innovation-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="innovation-content mb-lg-24">
+            <div class="images-gallery">
+              <a href="img/innovation4.jpg" data-fancybox="innovation-gallery" class="image-wrapper"><img
+                  src="img/innovation4.jpg" alt=""></a>
+            </div>
+
+            <div class="basic-principle">
+              <h3>indoor
+                / Outdoor</h3>
+              <div class="box-text">
+                <p>универсальность нашей продукции заключается <br>
+                  в том, что ее можно использовать как в жилых <br>интерьерах, так и в качестве уличной мебели</p>
+              </div>
+            </div>
+            <a href="about.html" class="btn btn-dark">Узнать больше о компании</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <a href="img/innovation5.jpg" data-fancybox="innovation-gallery" class="image-wrapper"><img
+              src="img/innovation5.jpg" alt=""></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="video-section video-wrapper w-100">
+    <video class="w-100 manual-video" playsinline poster="img/video-poster.jpg">
+      <source src="video1.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+    <button class="play-btn"><svg class="svg-icon">
+        <use xlink:href="img/sprite.svg#play-icon"></use>
+      </svg></button>
+  </div>
+
+  <section class="advantages-section p-120">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-7 col-xl-8">
+          <h2 class="text-indent h2-big">Преимущества <span class="text-gradient">алюминиевого</span>
+            <span class="text-indent-2 d-block">каркаса</span>
+          </h2>
+        </div>
+        <div class="col-12 col-lg-5 col-xl-4">
+          <div class="box-text box-text-title">
+            <p>Система X представляет собой значительный шаг вперед в мебельной индустрии, так как её алюминиевый корпус
+              обеспечивает ряд преимуществ, которые недоступны традиционным материалам</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="advantages-row w-100">
+            <div class="advantages-row-box">
+              <h3>Прочность</h3>
+            </div>
+            <div class="advantages-row-box">
+              <div class="box-text">
+                <ul>
+                  <li>легкий вес</li>
+                  <li>выдерживает большие нагрузки</li>
+                  <li>сохраняет геометрию на протяжении всего срока службы</li>
+                </ul>
+              </div>
+            </div>
+            <div class="advantages-row-box">
+              <div class="images-gallery justify-content-end">
+                <a href="img/advantages1.jpg" data-fancybox="advantages-gallery" class="image-wrapper"><img
+                    src="img/advantages1.jpg" alt=""></a>
+              </div>
+            </div>
+
+          </div>
+          <div class="advantages-row w-100">
+            <div class="advantages-row-box">
+              <h3>универсальность</h3>
+            </div>
+            <div class="advantages-row-box">
+              <div class="box-text">
+                <ul>
+                  <li>жилые интерьеры</li>
+                  <li>ванные комнаты</li>
+                  <li>уличная мебель</li>
+                </ul>
+              </div>
+            </div>
+            <div class="advantages-row-box">
+              <div class="images-gallery justify-content-end">
+                <a href="img/advantages2.jpg" data-fancybox="advantages-gallery" class="image-wrapper"><img
+                    src="img/advantages2.jpg" alt=""></a>
+                <a href="img/advantages3.jpg" data-fancybox="advantages-gallery" class="image-wrapper"><img
+                    src="img/advantages3.jpg" alt=""></a>
+              </div>
+            </div>
+
+          </div>
+          <div class="advantages-row w-100">
+            <div class="advantages-row-box">
+              <h3>Безопасно
+                для здоровья</h3>
+            </div>
+            <div class="advantages-row-box">
+              <div class="box-text">
+                <ul>
+                  <li>не выделяет формальдегиды</li>
+                  <li>не подвержен горению</li>
+                  <li>не вызывает аллергических реакций</li>
+                </ul>
+              </div>
+            </div>
+            <div class="advantages-row-box">
+              <div class="images-gallery justify-content-end">
+                <a href="img/advantages4.jpg" data-fancybox="advantages-gallery" class="image-wrapper"><img
+                    src="img/advantages4.jpg" alt=""></a>
+              </div>
+            </div>
+
+          </div>
+          <div class="advantages-row w-100">
+            <div class="advantages-row-box">
+              <h3>Экологичность</h3>
+            </div>
+            <div class="advantages-row-box">
+              <div class="box-text">
+                <ul>
+                  <li>100% экологически чистый</li>
+                  <li>100% перерабатываемый</li>
+                  <li>100% гигиеничный</li>
+                </ul>
+              </div>
+            </div>
+            <div class="advantages-row-box">
+              <div class="images-gallery justify-content-end">
+                <a href="img/advantages5.jpg" data-fancybox="advantages-gallery" class="image-wrapper"><img
+                    src="img/advantages5.jpg" alt=""></a>
+              </div>
+            </div>
+
+          </div>
+          <div class="advantages-row w-100">
+            <div class="advantages-row-box">
+              <h3>Долговечность</h3>
+            </div>
+            <div class="advantages-row-box">
+              <div class="box-text">
+                <ul>
+                  <li>высокая износостойкость</li>
+                  <li>устойчивость к перепадам температур</li>
+                  <li>не боится влаги и ультрафиолета</li>
+                </ul>
+              </div>
+            </div>
+            <div class="advantages-row-box">
+              <div class="images-gallery justify-content-end">
+                <a href="img/advantages6.jpg" data-fancybox="advantages-gallery" class="image-wrapper"><img
+                    src="img/advantages6.jpg" alt=""></a>
+                <a href="img/advantages7.jpg" data-fancybox="advantages-gallery" class="image-wrapper"><img
+                    src="img/advantages7.jpg" alt=""></a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sustainability-section p-120">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="sustainability-wrapper w-100">
+            <div class="sustainability-content">
+              <h2 class="h2-big">Устойчивость <br>
+                к воздействию
+                внешней среды</h2>
+              <div class="box-text">
+                <p>Мебель, созданная на основе системы X,не подвержена коррозии,
+                  не боится дождя, снега и солнечного света, что делает ее идеальной
+                  для использования, на улице, где она сможет сохранять свой первоначальный вид на протяжении многих лет
+                </p>
+              </div>
+            </div>
+            <div class="sustainability-item">
+              <div class="sustainability-item__img"><img src="img/sustainability1.jpg" alt=""></div>
+              <div class="sustainability-item__body">
+                <h3>до <span>–40°С </span></h3>
+                <div class="box-text">
+                  <p>температуры воздуха</p>
+                </div>
+              </div>
+            </div>
+            <div class="sustainability-item">
+              <div class="sustainability-item__img"><img src="img/sustainability2.jpg" alt=""></div>
+              <div class="sustainability-item__body">
+                <h3>до <span>100%</span></h3>
+                <div class="box-text">
+                  <p>Влажности воздуха</p>
+                </div>
+              </div>
+            </div>
+            <div class="sustainability-item">
+              <div class="sustainability-item__img"><img src="img/sustainability3.jpg" alt=""></div>
+              <div class="sustainability-item__body">
+                <h3>до <span>+90°С </span></h3>
+                <div class="box-text">
+                  <p>температуры воздуха</p>
+                </div>
+              </div>
+            </div>
+            <div class="sustainability-item">
+              <!-- <div class="sustainability-item__img"><img src="img/sustainability1.jpg" alt=""></div> -->
+              <div class="sustainability-item__body">
+                <h3><span>30+</span> лет </h3>
+                <div class="box-text">
+                  <p>Эксплуатации</p>
+                  <p>
+                    После чего алюминий можно переработать и использовать вторично</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-section p-120">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 mb-48">
+          <h2 class="h2-big">реализованные проекты</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6 mb-48">
+          <div class="project-card">
+            <a href="project.html" class="project-card__img"><img src="img/project1.jpg" alt=""></a>
+            <div class="project-card__body">
+              <a href="project.html" class="project-card__title h3">Outdoor кухонный <br>гарнитур с отделкой</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mb-48">
+          <div class="project-card">
+            <a href="project.html" class="project-card__img"><img src="img/project2.jpg" alt=""></a>
+            <div class="project-card__body">
+              <a href="project.html" class="project-card__title h3">Зона ТВ <br>
+                в гостиной</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mb-48">
+          <div class="project-card">
+            <a href="project.html" class="project-card__img"><img src="img/project3.jpg" alt=""></a>
+            <div class="project-card__body">
+              <a href="project.html" class="project-card__title h3">Кухонный <br>
+                остров</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mb-48">
+          <div class="project-card">
+            <a href="project.html" class="project-card__img"><img src="img/project4.jpg" alt=""></a>
+            <div class="project-card__body">
+              <a href="project.html" class="project-card__title h3">прихожая</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <a href="projects.html" class="btn btn-dark m-auto">Все проекты</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="package-section p-120">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6">
+          <h2 class="text-indent h2-big">Упаковка <br>
+            и доставка</h2>
+          <div class="tehnology-box">
+            <h4>Для защиты нашей продукции от повреждений при транспортировке,
+              мы доставляем товары в заводской упаковке от производителя</h4>
+          </div>
+          <a href="delivery.html" class="btn btn-dark"><span class="d-none d-lg-block">Узнать больше об упаковке и доставке</span><span class="d-block d-lg-none">Узнать больше</span></a>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="package-img"><img src="img/package-img.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners-section bg-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="h2-big mb-48 text-uppercase">Наши партнеры</h2>
+        </div>
+        <div class="col-12">
+          <div class="partners-wrapper">
+            <a href="#" class="partners-item"><img src="img/partner1.svg" alt=""></a>
+            <a href="#" class="partners-item"><img src="img/partner2.svg" alt=""></a>
+            <a href="#" class="partners-item"><img src="img/partner3.svg" alt=""></a>
+            <a href="#" class="partners-item"><img src="img/partner4.svg" alt=""></a>
+            <a href="#" class="partners-item"><img src="img/partner5.svg" alt=""></a>
+            <a href="#" class="partners-item"><img src="img/partner6.png" alt=""></a>
+            <a href="#" class="partners-item"><img src="img/partner7.png" alt=""></a>
+            <a href="#" class="partners-item"><img src="img/partner8.svg" alt=""></a>
+            <a href="#" class="partners-item"><img src="img/partner9.svg" alt=""></a>
+            <a href="#" class="partners-item"><img src="img/partner10.png" alt=""></a>
+            <a href="#" class="partners-item"><img src="img/partner11.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cooperation-section p-120">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <h2 class="text-indent h2-big">Приглашаем <br>
+            к сотрудничеству
+            <span class="text-gradient text-indent-2 d-block">дизайнеров</span>
+          </h2>
+        </div>
+
+        <div class="col-12 col-lg-4">
+          <div class="box-text">
+            <p>XCOMPANY - мебельная фабрика, которая создает стильные и функциональные решения для интерьеров и
+              экстерьеров, позволяющие воплотить в жизнь самые смелые дизайнерские решения</p>
+            <a href="about.html" class="btn btn-dark">Узнать больше</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-xl-10 offset-xl-1">
+          <div class="cooperation-image"><img src="img/cooperation-img.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="callback-section p-120 bg-light-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-7 col-xl-7">
+          <div class="callback-section__content">
+            <h2>Хотите оставить заявку <br>
+              или появились вопросы?</h2>
+            <div class="box-text-big">
+              <p>Оставьте свои контактные данные, и мы с вами свяжемся</p>
+            </div>
+
+            <form method="post" class="form-callback">
+              <label><input type="text" name="name" placeholder="Имя" required></label>
+              <label><input type="text" name="phone" placeholder="Телефон" required></label>
+              <h4>Как с вами связаться?</h4>
+              <div class="list-social-radio">
+                <label class="social-radio-item">
+                  <input type="radio" name="contact-method" value="whatsapp" checked>
+                  <span class="social-radio-item__custom"></span>
+                  <span class="radio-text">WhatsApp</span>
+                </label>
+                <label class="social-radio-item">
+                  <input type="radio" name="contact-method" value="Telegram">
+                  <span class="social-radio-item__custom"></span>
+                  <span class="radio-text">Telegram</span>
+                </label>
+                <label class="social-radio-item">
+                  <input type="radio" name="contact-method" value="Телефон">
+                  <span class="social-radio-item__custom"></span>
+                  <span class="radio-text">Телефон</span>
+                </label>
+              </div>
+
+              <div class="form-footer">
+                <label class="label-checkbox">
+                  <input type="checkbox" name="checkbox">
+                  <span class="label-checkbox__custom"></span>
+                  <span class="label-checkbox__text">Нажимая кнопку "Отправить" вы соглашаетесь с политикой обработки
+                    персональных данных</span>
+                </label>
+                <button type="submit" class="btn btn-dark">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5 col-xl-5">
+          <div class="callback-section__image"><img src="img/callback-img.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4 col-xl-5">
+          <a href="index.html" class="logo"><img src="img/logo-white.svg" alt=""></a>
+          <ul class="menu-documents my-ul font-text">
+            <li><a href="#" target="_blank">Положение об обработке персональных данных</a></li>
+            <li><a href="#" target="_blank">Пользовательское соглашение</a></li>
+            <li><a href="#" target="_blank">Согласие на обработку данных метрическими программами</a></li>
+            <li><a href="#" target="_blank">Согласие на обработку персональных данных</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-4">
+          <nav class="nav-menu nav-menu-footer">
+            <ul class="menu menu-footer my-ul">
+              <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+              <li class="nav-item"><a href="kitchen.html" class="nav-link">Кухня</a></li>
+              <li class="nav-item"><a href="wardrobe.html" class="nav-link">Гардеробная</a></li>
+              <li class="nav-item"><a href="tv-zones.html" class="nav-link">ТВ зоны</a></li>
+              <li class="nav-item"><a href="tables.html" class="nav-link">Столы</a></li>
+              <li class="nav-item"><a href="hallway.html" class="nav-link">Прихожая</a></li>
+              <li class="nav-item"><a href="bathroom.html" class="nav-link">Ванная</a></li>
+              <li class="nav-item"><a href="outdoors.html" class="nav-link">OUTDOORS</a></li>
+              <li class="nav-item"><a href="patents.html" class="nav-link">Патенты</a></li>
+              <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-3">
+          <div class="footer-box">
+            <p class="font-text">Телефон:</p>
+            <a href="tel:88000000000" class="phone h3">8 (800) 00-000-00</a>
+
+
+            <ul class="social-list social-list-white my-ul">
+              <li><a href="#"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#vk-icon"></use>
+                  </svg></a></li>
+              <li><a href="#"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+ 
+  <!-- Modal -->
+  <div class="modal fade" id="callbackModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h3 class="modal-title">Хотите оставить заявку или появились вопросы?</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+          <div class="box-text-big">
+            <p>Оставьте свои контактные данные, и мы с вами свяжемся</p>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <form method="post" class="form-callback">
+            <label><input type="text" name="name" placeholder="Имя" required></label>
+            <label><input type="text" name="phone" placeholder="Телефон" required></label>
+            <h4>Как с вами связаться?</h4>
+            <div class="list-social-radio">
+              <label class="social-radio-item">
+                <input type="radio" name="contact-method" value="whatsapp" checked>
+                <span class="social-radio-item__custom"></span>
+                <span class="radio-text">WhatsApp</span>
+              </label>
+              <label class="social-radio-item">
+                <input type="radio" name="contact-method" value="Telegram">
+                <span class="social-radio-item__custom"></span>
+                <span class="radio-text">Telegram</span>
+              </label>
+              <label class="social-radio-item">
+                <input type="radio" name="contact-method" value="Телефон">
+                <span class="social-radio-item__custom"></span>
+                <span class="radio-text">Телефон</span>
+              </label>
+            </div>
+
+            <div class="form-footer">
+              <label class="label-checkbox">
+                <input type="checkbox" name="checkbox">
+                <span class="label-checkbox__custom"></span>
+                <span class="label-checkbox__text">Нажимая кнопку "Отправить" вы соглашаетесь с политикой обработки
+                  персональных данных</span>
+              </label>
+              <button type="submit" class="btn btn-dark">Отправить</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-dark" id="thanksModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+
+        <div class="modal-header text-center">
+          <h3 class="modal-title h2">Спасибо! Ваши данные получены!</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+          <div class="box-text-big">
+            <p>Мы скоро с вами свяжемся</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- add plugins js-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/fancybox.umd.js"></script>
+  <!-- add plugins js end-->
+
+  <script src="js/common.js"></script>
+
+</body>
+
+</html>

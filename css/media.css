@@ -407,6 +407,9 @@
   .category-section-item {
     padding: 64px 0 186px;
   }
+  .category-section-item-2 {
+    padding: 64px 0 226px;
+  }
   .modal-content .social-radio-item {
     flex: none;
     width: -moz-fit-content;
@@ -415,6 +418,9 @@
   }
   .modal-content .social-radio-item:last-child {
     margin: 0 0 16px;
+  }
+  .projects-section .btn {
+    width: 100%;
   }
 }
 @media only screen and (max-width: 420px) {
@@ -450,6 +456,9 @@
   }
   .category-section-item {
     padding: 64px 0 126px;
+  }
+  .category-section-item {
+    padding: 64px 0 186px;
   }
   footer .phone {
     font-size: 24px;

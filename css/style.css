@@ -204,8 +204,6 @@ textarea {
   max-width: 584px;
   width: 100%;
   margin: 0 auto;
-}
-.form-callback [type=submit] {
   margin: 0 0 0 10px;
 }
 .form-callback h4 {
@@ -246,6 +244,9 @@ textarea {
 .social-radio-item input {
   display: none;
 }
+.social-radio-item input:checked ~ .social-radio-item__custom:after {
+  transform: translate(-50%, -50%) scale(1);
+}
 .social-radio-item__custom {
   margin: 0 12px 0 0;
   width: 18px;
@@ -268,9 +269,6 @@ textarea {
   border-radius: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: 0.3s ease;
-}
-.social-radio-item input:checked ~ .social-radio-item__custom:after {
-  transform: translate(-50%, -50%) scale(1);
 }
 .social-radio-item:hover {
   border-color: #1D2126;
@@ -659,4 +657,22 @@ h4, .h4 {
 }
 .label-checkbox:hover {
   color: #1D2126;
+}
+
+.anim-letters {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.anim-letters span {
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 3.6s ease-in-out;
+}
+.anim-letters span.half {
+  opacity: 0.5;
+}
+.anim-letters span.visible {
+  opacity: 1;
+  transition: opacity 1.4s ease-out;
 }

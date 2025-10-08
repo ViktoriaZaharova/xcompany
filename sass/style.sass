@@ -107,19 +107,18 @@ input, textarea, select
     outline: none
     box-shadow: none
   &:hover
-    border: 1px solid $gray-stroke  
+    border: 1px solid $gray-stroke
     color: $dark
     &::placeholder
       color: $dark
   &:focus
-    border-color: $dark 
-    color: $dark   
+    border-color: $dark
+    color: $dark
   &:valid
     background: #F0F0F0
-    border: 1px solid $gray-stroke 
+    border: 1px solid $gray-stroke
     color: $dark
 
-  
 input[type="radio"], input[type="checkbox"]
   width: auto
   height: auto
@@ -145,10 +144,10 @@ textarea
   width: 100%
   margin: 0 auto
   [type="submit"]
-    margin: 0 0 0 10px
+  margin: 0 0 0 10px
   h4
     margin: 16px 0
-    color: $dark-60  
+    color: $dark-60
 
 .form-footer
   width: 100%
@@ -178,6 +177,8 @@ textarea
     margin: 0 0 16px
   input
     display: none
+    &:checked ~ .social-radio-item__custom:after
+      transform: translate(-50%, -50%) scale(1)
   &__custom
     margin: 0 12px 0 0
     width: 18px
@@ -199,14 +200,11 @@ textarea
       border-radius: 50%
       transform: translate(-50%, -50%) scale(0)
       transition: .3s ease
-  input:checked ~ .social-radio-item__custom:after
-    transform: translate(-50%, -50%) scale(1)
   &:hover
     border-color: $dark
     color: $dark
   &:focus
-    border-color: $dark-60  
-
+    border-color: $dark-60
 
 button, .btn
   outline: none
@@ -331,7 +329,7 @@ h4, .h4
   p
     margin: 0 0 16px
     &:last-child
-      margin: 0  
+      margin: 0
 
 .box-text-big
   font-size: 24px
@@ -346,13 +344,13 @@ h4, .h4
   padding: 120px 0
 
 .mb-32
-  margin-bottom: 32px  
+  margin-bottom: 32px
 
 .mb-48
   margin-bottom: 48px
 
 .mb-64
-  margin-bottom: 64px  
+  margin-bottom: 64px
 
 .text-uppercase
   text-transform: uppercase
@@ -362,7 +360,7 @@ h4, .h4
   color: $white
 
 .bg-light-gray
-  background: $light-gray  
+  background: $light-gray
 
 .text-gradient
   background: linear-gradient(90deg, #5B6674 0%, #B3BCC4 15.25%, #68778A 37.38%, #435267 59.02%, #A2AEB9 78.28%, #20272E 90.04%)
@@ -372,13 +370,13 @@ h4, .h4
   text-fill-color: transparent
 
 .text-indent
-  text-indent: 75px  
+  text-indent: 75px
 
 .text-indent-2
-  text-indent: 35px  
+  text-indent: 35px
 
 .d-block
-  display: flex   
+  display: flex
 
 .social-list
   display: flex
@@ -480,9 +478,9 @@ h4, .h4
     .svg-icon-burger
       display: none
     .svg-icon-close
-      display: block 
+      display: block
   svg
-    transition: .3s ease     
+    transition: .3s ease
 
 .svg-icon-close
   display: none
@@ -510,7 +508,7 @@ h4, .h4
       background: $dark url('../img/check-icon-white.svg') no-repeat center
       background-size: 16px
     &:checked ~ .label-checkbox__text
-      color: $dark  
+      color: $dark
 
   &__custom
     position: relative
@@ -525,3 +523,21 @@ h4, .h4
   &:hover
     color: $dark
 //checkbox my end
+
+// animate title
+.anim-letters
+  display: inline-block
+  overflow: hidden
+  white-space: nowrap
+
+  span
+    display: inline-block
+    opacity: 0
+    transition: opacity 3.6s ease-in-out // плавное, длинное проявление //
+
+  span.half
+    opacity: 0.5
+
+  span.visible
+    opacity: 1
+    transition: opacity 1.4s ease-out // быстрее 2-й фазы //
