@@ -526,14 +526,18 @@ h4, .h4
 
 // animate title
 .anim-letters
-  display: inline-block
+  display: block
+  line-height: 1.2
+  text-align: center
+  white-space: normal
   overflow: hidden
-  white-space: nowrap
 
   span
-    display: inline-block
+    display: inline
     opacity: 0
     transition: opacity 3.6s ease-in-out // плавное, длинное проявление //
+    will-change: opacity
+    vertical-align: baseline
 
   span.half
     opacity: 0.5
@@ -541,3 +545,71 @@ h4, .h4
   span.visible
     opacity: 1
     transition: opacity 1.4s ease-out // быстрее 2-й фазы //
+
+// accordion
+.accordion
+  border: none
+  border-radius: 0
+
+.accordion-grid
+  display: grid
+  grid-template-columns: 1fr 1fr
+  align-items: start
+  // gap: 30px
+
+.accordion-item
+  border: 1px solid $gray-stroke
+  transition: box-shadow 0.3s ease
+  border-radius: 0
+  padding: 0 
+  &:last-child
+    border-radius: 0
+  &:first-child
+    border-radius: 0
+
+.accordion-button
+  background-color: transparent
+  font-weight: 600
+  font-size: 24px
+  color: $dark
+  box-shadow: none !important
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 48px 
+
+  &:focus
+    box-shadow: none
+
+  &::after
+    content: ''
+    background: $dark url('../img/plus.svg') no-repeat center
+    background-size: 32px
+    color: #fff
+    font-size: 22px
+    width: 52px
+    height: 52px
+    margin-left: 24px
+    display: flex
+    align-items: center
+    justify-content: center
+    transform: none !important
+    transition: all 0.3s ease
+
+  &:not(.collapsed)
+    background: transparent
+    color: $dark
+    padding: 48px 48px 0
+    &::after
+      content: ''
+      background: $dark url('../img/minus.svg') no-repeat center
+      background-size: 32px
+
+.accordion-collapse
+  overflow: hidden
+  transition: max-height 0.4s ease, opacity 0.4s ease
+
+.accordion-body
+  color: $dark-40
+  line-height: 22px
+  padding: 16px 48px 48px

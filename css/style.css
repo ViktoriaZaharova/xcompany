@@ -660,14 +660,18 @@ h4, .h4 {
 }
 
 .anim-letters {
-  display: inline-block;
+  display: block;
+  line-height: 1.2;
+  text-align: center;
+  white-space: normal;
   overflow: hidden;
-  white-space: nowrap;
 }
 .anim-letters span {
-  display: inline-block;
+  display: inline;
   opacity: 0;
   transition: opacity 3.6s ease-in-out;
+  will-change: opacity;
+  vertical-align: baseline;
 }
 .anim-letters span.half {
   opacity: 0.5;
@@ -675,4 +679,79 @@ h4, .h4 {
 .anim-letters span.visible {
   opacity: 1;
   transition: opacity 1.4s ease-out;
+}
+
+.accordion {
+  border: none;
+  border-radius: 0;
+}
+
+.accordion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.accordion-item {
+  border: 1px solid #dbdbdb;
+  transition: box-shadow 0.3s ease;
+  border-radius: 0;
+  padding: 0;
+}
+.accordion-item:last-child {
+  border-radius: 0;
+}
+.accordion-item:first-child {
+  border-radius: 0;
+}
+
+.accordion-button {
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 24px;
+  color: #1D2126;
+  box-shadow: none !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px;
+}
+.accordion-button:focus {
+  box-shadow: none;
+}
+.accordion-button::after {
+  content: "";
+  background: #1D2126 url("../img/plus.svg") no-repeat center;
+  background-size: 32px;
+  color: #fff;
+  font-size: 22px;
+  width: 52px;
+  height: 52px;
+  margin-left: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: none !important;
+  transition: all 0.3s ease;
+}
+.accordion-button:not(.collapsed) {
+  background: transparent;
+  color: #1D2126;
+  padding: 48px 48px 0;
+}
+.accordion-button:not(.collapsed)::after {
+  content: "";
+  background: #1D2126 url("../img/minus.svg") no-repeat center;
+  background-size: 32px;
+}
+
+.accordion-collapse {
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.accordion-body {
+  color: rgba(25, 41, 57, 0.4);
+  line-height: 22px;
+  padding: 16px 48px 48px;
 }

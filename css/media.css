@@ -116,6 +116,9 @@
   }
 }
 @media only screen and (max-width: 992px) {
+  h1, .h1 {
+    font-size: 60px;
+  }
   .p-120 {
     padding: 64px 0;
   }
@@ -335,8 +338,53 @@
   .menu-footer li a {
     margin: 0 auto;
   }
+  .accordion-grid {
+    grid: none;
+  }
+  .accordion-item {
+    border: 1px solid #DBDBDB;
+  }
+  .accordion-button {
+    padding: 24px;
+  }
+  .accordion-button:not(.collapsed) {
+    padding: 24px 24px 0;
+  }
+  .accordion-body {
+    padding: 16px 24px 24px;
+  }
+  .about-section .box-text {
+    max-width: none;
+  }
+  .about-section br {
+    display: none;
+  }
+  .about-content {
+    margin: 24px 0 0;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .about-content::before {
+    content: "";
+    width: 127px;
+    height: 86px;
+    background: url("../img/logo-border.svg") no-repeat center;
+    background-size: 100%;
+    margin: 0 0 0 auto;
+  }
+  .about-content__img {
+    margin: 0;
+    order: -1;
+  }
+  .about-content .box-text {
+    max-width: none;
+    margin: 24px 0 0;
+  }
 }
 @media only screen and (max-width: 768px) {
+  h1, .h1 {
+    font-size: 40px;
+  }
   h2, .h2 {
     font-size: 32px;
   }
@@ -422,8 +470,19 @@
   .projects-section .btn {
     width: 100%;
   }
+  .accordion-button {
+    font-size: 18px;
+    line-height: 20px;
+    align-items: flex-start;
+  }
+  .home-partners {
+    padding: 77px 0;
+  }
 }
 @media only screen and (max-width: 420px) {
+  h1, .h1 {
+    font-size: 34px;
+  }
   .h2-big, h2, .h2 {
     font-size: 28px;
   }
@@ -466,6 +525,13 @@
   .modal-content .social-radio-item {
     width: 100%;
     margin: 0 0 16px;
+  }
+  .about-content::before {
+    width: 60px;
+    height: 45px;
+  }
+  .about-content__img {
+    max-width: 200px;
   }
 }
 @media only screen and (max-width: 370px) {

@@ -418,3 +418,30 @@
   background: url("../img/kitchen-home-bg.jpg") no-repeat center;
   background-size: cover;
 }
+
+.home-partners {
+  padding: 184px 0;
+  background: url("../img/partners-home-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.about-section .box-text {
+  margin: 10px 0 0;
+  max-width: 500px;
+  color: rgba(25, 41, 57, 0.8);
+}
+
+.about-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: -30px 0 0;
+}
+.about-content__img {
+  max-width: 235px;
+  margin: 0 53px 0 0;
+}
+.about-content .box-text {
+  max-width: 343px;
+  margin: 0;
+}

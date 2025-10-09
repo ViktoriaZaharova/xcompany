@@ -211,48 +211,94 @@ $(function() {
 
 // animate title
 $(document).ready(function () {
-  function animateLetters($element) {
-    var text = $element.text();
-    $element.html('');
 
-    // Разбиваем текст на отдельные буквы
-    for (var i = 0; i < text.length; i++) {
-      var char = text[i] === ' ' ? '&nbsp;' : text[i];
-      $element.append('<span>' + char + '</span>');
-    }
+  function splitLettersKeepingSpaces($el) {
+    // не делаем дважды
+    if ($el.data('letters-split')) return;
+    const nodes = $el.contents().toArray();
+    $el.empty();
 
-    $(window).on('scroll load', function () {
-      var top = $element.offset().top;
-      var bottom = top + $element.outerHeight();
-      var scrollTop = $(window).scrollTop();
-      var windowBottom = scrollTop + $(window).height();
-
-      if (bottom > scrollTop && top < windowBottom) {
-        var $letters = $element.find('span');
-
-        // 1️⃣ Первая фаза — поочерёдно до полупрозрачности
-        $letters.each(function (i) {
-          var $span = $(this);
-          setTimeout(function () {
-            $span.addClass('half');
-          }, i * 420); // естественный темп (между 240 и 480)
-        });
-
-        // 2️⃣ Вторая фаза — до полного проявления, быстрее
-        setTimeout(function () {
-          $letters.each(function (i) {
-            var $span = $(this);
-            setTimeout(function () {
-              $span.removeClass('half').addClass('visible');
-            }, i * 200); // быстрее вторая волна
-          });
-        }, $letters.length * 420 + 1600); // пауза между фазами немного короче
+    nodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        const text = node.nodeValue;
+        for (let i = 0; i < text.length; i++) {
+          const ch = text[i];
+          if (ch === ' ') {
+            // обычный пробел — добавляем текстовый узел, чтобы разрешить переносы
+            $el.append(document.createTextNode(' '));
+          } else if (ch === '\u00A0') {
+            // если в исходнике был &nbsp;
+            $el.append(document.createTextNode('\u00A0'));
+          } else if (ch === '\n' || ch === '\r') {
+            // игнорируем переводы строк в исходном тексте
+          } else {
+            // буква — оборачиваем в span
+            const $span = $('<span>').text(ch);
+            $el.append($span);
+          }
+        }
+      } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName.toLowerCase() === 'br') {
+        $el.append('<br>');
+      } else {
+        // на всякий случай: если внутри были другие элементы — берем их текст
+        const txt = $(node).text();
+        for (let i = 0; i < txt.length; i++) {
+          const ch = txt[i];
+          if (ch === ' ') {
+            $el.append(document.createTextNode(' '));
+          } else if (ch === '\u00A0') {
+            $el.append(document.createTextNode('\u00A0'));
+          } else {
+            $el.append($('<span>').text(ch));
+          }
+        }
       }
     });
+
+    $el.data('letters-split', true);
   }
 
+  function animateLettersOnce($el) {
+    if ($el.data('animated')) return; // один раз по умолчанию
+    const $letters = $el.find('span');
+    if ($letters.length === 0) return;
+
+    // 1-я фаза — до 0.5 (поочерёдно)
+    $letters.each(function (i) {
+      const $s = $(this);
+      setTimeout(function () {
+        $s.addClass('half');
+      }, i * 420); // темп первой фазы
+    });
+
+    // 2-я фаза — до 1.0 (быстрее)
+    setTimeout(function () {
+      $letters.each(function (i) {
+        const $s = $(this);
+        setTimeout(function () {
+          $s.removeClass('half').addClass('visible');
+        }, i * 200); // темп второй фазы (быстрее)
+      });
+    }, $letters.length * 420 + 1600);
+
+    $el.data('animated', true);
+  }
+
+  // Подготовка (разбиваем тексты на буквы, сохраняя пробелы и <br>)
   $('.anim-letters').each(function () {
-    animateLetters($(this));
+    splitLettersKeepingSpaces($(this));
   });
+
+  // Запуск анимации при загрузке/скролле
+  $(window).on('load scroll', function () {
+    $('.anim-letters').each(function () {
+      animateLettersOnce($(this));
+    });
+  });
+
+  // Если нужно — можно принудительно запустить для всех сразу:
+  // $('.anim-letters').each(function () { animateLettersOnce($(this)); });
+
 });
 
+// accordion

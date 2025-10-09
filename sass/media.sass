@@ -113,6 +113,9 @@
     max-width: none
 
 @media only screen and (max-width: 992px)
+  h1, .h1
+    font-size: 60px
+
   .p-120
     padding: 64px 0
 
@@ -120,7 +123,7 @@
     margin-bottom: 24px
 
   .mb-64
-    margin-bottom: 24px  
+    margin-bottom: 24px
 
   .h2-big
     font-size: 40px
@@ -183,7 +186,7 @@
     padding: 70px 0 350px
 
   .images-gallery .image-wrapper
-    height: 203px  
+    height: 203px
 
   .innovation-content
     margin: 0
@@ -316,9 +319,52 @@
     li
       margin: 0
       a
-        margin: 0 auto            
+        margin: 0 auto
+
+  .accordion-grid
+    grid: none
+
+  .accordion-item
+    border: 1px solid #DBDBDB
+    &:last-child
+
+  .accordion-button
+    padding: 24px
+
+  .accordion-button:not(.collapsed)
+    padding: 24px 24px 0
+
+  .accordion-body
+    padding: 16px 24px 24px
+
+  .about-section
+    .box-text
+      max-width: none
+    br
+      display: none
+
+  .about-content
+    margin: 24px 0 0
+    flex-wrap: wrap
+    align-items: flex-start
+    &::before
+      content: ''
+      width: 127px
+      height: 86px
+      background: url('../img/logo-border.svg') no-repeat center
+      background-size: 100%
+      margin: 0 0 0 auto
+    &__img
+      margin: 0
+      order: -1
+    .box-text
+      max-width: none
+      margin: 24px 0 0
 
 @media only screen and (max-width: 768px)
+  h1, .h1
+    font-size: 40px
+
   h2, .h2
     font-size: 32px
 
@@ -354,13 +400,13 @@
   .category-section-item
     padding: 84px 0 226px
     .btn
-      display: none  
+      display: none
 
   .modal-content
     padding: 32px
 
   .modal-body
-    margin: 24px 0 0  
+    margin: 24px 0 0
 
   .modal-content .form-callback
     margin: 0
@@ -368,10 +414,10 @@
   .modal-header .box-text-big
     margin: 12px 0 0
     max-width: none
-    font-size: 16px  
+    font-size: 16px
 
   .modal-dark .modal-content
-    padding: 120px 24px  
+    padding: 120px 24px
 
 @media only screen and (max-width: 576px)
   .form-footer
@@ -387,10 +433,10 @@
     margin: 0 0 16px
 
   .category-section-item
-    padding: 64px 0 186px 
+    padding: 64px 0 186px
 
   .category-section-item-2
-    padding: 64px 0 226px   
+    padding: 64px 0 226px
 
   .modal-content
     .social-radio-item
@@ -398,18 +444,28 @@
       width: fit-content
       margin: 0 16px 16px 0
       &:last-child
-        margin: 0 0 16px 
+        margin: 0 0 16px
 
   .projects-section
     .btn
-      width: 100%      
+      width: 100%
+
+  .accordion-button
+    font-size: 18px
+    line-height: 20px
+    align-items: flex-start
+
+  .home-partners
+    padding: 77px 0
 
 @media only screen and (max-width: 480px)
 
 @media only screen and (max-width: 420px)
+  h1, .h1
+    font-size: 34px
+    
   .h2-big, h2, .h2
     font-size: 28px
-
 
   .partners-item
     height: 60px
@@ -425,7 +481,7 @@
     text-indent: 20px
 
   .package-section .tehnology-box
-    padding: 26px      
+    padding: 26px
 
   .sustainability-item h3 span
     font-size: 50px
@@ -441,25 +497,32 @@
     padding: 64px 0 126px
 
   .category-section-item
-    padding: 64px 0 186px    
+    padding: 64px 0 186px
 
   footer .phone
-    font-size: 24px  
+    font-size: 24px
 
   .modal-content
     .social-radio-item
       width: 100%
-      margin: 0 0 16px  
+      margin: 0 0 16px
+
+  .about-content::before
+    width: 60px
+    height: 45px
+
+  .about-content__img
+    max-width: 200px  
 
 @media only screen and (max-width: 370px)
   .logo
     max-width: 260px
 
   .partners-item
-    height: 44px  
+    height: 44px
 
   .text-indent
     text-indent: 20px
 
   .text-indent-2
-    text-indent: 10px    
+    text-indent: 10px

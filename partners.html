@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xcompany</title>
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- add plugins css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/fancybox.css">
+  <!-- add plugins css end -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+
+  <canvas id="mouseCanvas"></canvas>
+
+  <header>
+    <div class="header-top">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 d-flex align-items-center">
+            <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
+            <nav class="nav-menu nav-menu-header">
+              <ul class="menu menu-header my-ul">
+                <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="kitchen.html" class="nav-link">Кухня</a></li>
+                <li class="nav-item"><a href="wardrobe.html" class="nav-link">Гардеробная</a></li>
+                <li class="nav-item"><a href="tv-zones.html" class="nav-link">ТВ зоны</a></li>
+                <li class="nav-item"><a href="tables.html" class="nav-link">Столы</a></li>
+                <li class="nav-item"><a href="hallway.html" class="nav-link">Прихожая</a></li>
+                <li class="nav-item"><a href="bathroom.html" class="nav-link">Ванная</a></li>
+                <li class="nav-item"><a href="outdoors.html" class="nav-link">OUTDOORS</a></li>
+                <li class="nav-item"><a href="patents.html" class="nav-link">Патенты</a></li>
+                <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+              </ul>
+            </nav>
+            <a href="tel:88000000000" class="phone">8 (800) 00-000-00</a>
+            <ul class="social-list my-ul">
+              <li><a href="#"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#vk-icon"></use>
+                  </svg></a></li>
+              <li><a href="#"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+                  </svg></a></li>
+            </ul>
+
+            <a href="#" class="btn-burger"><svg class="svg-icon svg-icon-burger">
+                <use xlink:href="img/sprite.svg#burger-icon"></use>
+              </svg>
+              <svg class="svg-icon svg-icon-close">
+                <use xlink:href="img/sprite.svg#close-icon"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-5 col-xl-5 order-lg-1">
+            <ul class="header-bottom-menu my-ul">
+              <li><a href="index.html" class="active">Главная</a></li>
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="package.html">Упаковка и доставка</a></li>
+              <li><a href="partners.html">Дизайнерам и партнерам</a></li>
+              <li><a href="projects.html">Реализованные проекты</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3 offset-xl-1 order-lg-1">
+            <ul class="header-bottom-menu my-ul">
+              <li><a href="catalog.html">Каталог</a>
+
+                <ul class="header-bottom-submenu my-ul">
+                  <li><a href="kitchen.html">Кухни</a></li>
+                  <li><a href="wardrobe.html">Гардеробные</a></li>
+                  <li><a href="tv-zones.html">ТВ зоны</a></li>
+                  <li><a href="tables.html">Столы</a></li>
+                  <li><a href="hallway.html">Прихожая</a></li>
+                  <li><a href="bathroom.html">Ванная</a></li>
+                  <li><a href="outdoors.html">OUTDOORS</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-3 col-xl-3">
+            <div class="header-bottom-box">
+              <ul class="social-list social-list-white-border my-ul">
+                <li><a href="#"><svg class="svg-icon">
+                      <use xlink:href="img/sprite.svg#vk-icon"></use>
+                    </svg></a></li>
+                <li><a href="#"><svg class="svg-icon">
+                      <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+                    </svg></a></li>
+              </ul>
+
+              <a href="mailto:xcompany.pro@mail.ru" class="mail">xcompany.pro@mail.ru</a>
+              <a href="tel:+78000000000" class="phone-link">8 (800) 00-000-00</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="home home-catalog home-page home-partners">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="anim-letters">
+            Дизайнерам и<br>
+            партнерам
+          </h1>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="about-section p-120">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-7">
+          <h3>XCOMPANY старается идти в ногу <br>
+            со временем и предлагать своим клиентам <span class="text-gradient">самые актуальные, удобные <br>
+              и стильные решения</span></h3>
+          <div class="box-text">
+            <p>В связи с этим, мы приглашаем к сотрудничеству
+              дизайнеров и студии дизайна</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-6 offset-lg-6">
+          <div class="about-content">
+            <div class="about-content__img"><img src="img/about-img.jpg" alt=""></div>
+            <div class="about-content__body">
+              <div class="box-text">
+                <p>Вместе мы можем предложить нашим клиентам не просто услугу, а целый комплекс работ, включающих в себя
+                  разработку дизайна, проектирование и изготовление модульной мебели или мебели на заказ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="tehnology-company p-120">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-10">
+          <h2 class="h2-big text-indent mb-64">Технологии и ценности
+            компании <span class="text-gradient">XCOMPANY</span></h2>
+        </div>
+      </div>
+
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6 col-xl-5">
+          <div class="tehnology-box">
+            <h4>В основе наших решений лежит уникальная, запатентованная <span
+                class="text-gradient text-uppercase">СИСТЕМА X</span></h4>
+            <div class="box-text">
+              <p>Она позволяет собирать корпусную мебель полностью из алюминия. Открывая новые горизонты для создания
+                функциональных и стильных indoor/outdoor-решений</p>
+            </div>
+          </div>
+
+          <div class="basic-principle">
+            <h3>Основной принцип:</h3>
+            <div class="box-text">
+              <p><strong>Cистема X</strong> предлагает потребителям новый, качественный и долговечный продукт</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 col-xl-7">
+          <div class="tehnology-video">
+            <video class="auto-video" muted loop playsinline autoplay>
+              <source src="video1.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="innovation-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 d-block d-lg-none mb-32">
+          <div class="basic-principle">
+            <h3>инновации</h3>
+            <div class="box-text">
+              <p>Мы внедряем инновационные технологии, которые <br>способствуют созданию экологически чистой продукции
+                с
+                минимальным воздействием на природу</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6 mb-lg-16">
+          <a href="img/innovation1.jpg" data-fancybox="innovation-gallery" class="image-wrapper"><img
+              src="img/innovation1.jpg" alt=""></a>
+        </div>
+        <div class="col-12 col-lg-6 order-lg-1">
+          <div class="innovation-content">
+            <div class="images-gallery justify-content-end">
+              <a href="img/innovation2.jpg" data-fancybox="innovation-gallery" class="image-wrapper"><img
+                  src="img/innovation2.jpg" alt=""></a>
+              <a href="img/innovation3.jpg" data-fancybox="innovation-gallery" class="image-wrapper"><img
+                  src="img/innovation3.jpg" alt=""></a>
+            </div>
+
+            <div class="basic-principle d-none d-lg-block">
+              <h3>инновации</h3>
+              <div class="box-text">
+                <p>Мы внедряем инновационные технологии, которые <br>способствуют созданию экологически чистой продукции
+                  с
+                  минимальным воздействием на природу</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="innovation-section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-lg-6">
+          <div class="innovation-content mb-lg-24">
+            <div class="images-gallery">
+              <a href="img/innovation4.jpg" data-fancybox="innovation-gallery" class="image-wrapper"><img
+                  src="img/innovation4.jpg" alt=""></a>
+            </div>
+
+            <div class="basic-principle">
+              <h3>indoor
+                / Outdoor</h3>
+              <div class="box-text">
+                <p>универсальность нашей продукции заключается <br>
+                  в том, что ее можно использовать как в жилых <br>интерьерах, так и в качестве уличной мебели</p>
+              </div>
+            </div>
+            <a href="about.html" class="btn btn-dark">Узнать больше о компании</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <a href="img/innovation5.jpg" data-fancybox="innovation-gallery" class="image-wrapper"><img
+              src="img/innovation5.jpg" alt=""></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <section class="faq bg-light-gray p-120">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mb-48">
+          <h2>Вопрос-ответ</h2>
+        </div>
+
+        <div class="col-12">
+            <div class="accordion accordion-grid">
+              <div class="accordion-item">
+                <div class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    Вы берете дизайнеров на собственные проекты или вам нужны дизайнеры со своим проектом?
+                  </button>
+                </div>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                  <div class="accordion-body">
+                    <p>Мы работаем в основном с дизайнерами, у которых уже есть готовый проект, и которые ищут исполнителя. Но если вы хотите предложить свою кандидатуру в качестве нашего штатного дизайнера - присылайте свое портфолио, мы всегда готовы рассмотреть новых талантливых соискателей!</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <div class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Как осуществляется работа с дизайнерами?
+                  </button>
+                </div>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                  <div class="accordion-body">
+                    <p>Доставка осуществляется транспортными компаниями. Мы подбираем оптимальный вариант для вас.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <div class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    На каких условиях осуществляется сотрудничество с дизайнерами?
+                  </button>
+                </div>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                  <div class="accordion-body">
+                    <p>Доставка осуществляется по всей Украине.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="projects-section p-120">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 mb-48">
+          <h2 class="h2-big">реализованные проекты</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-6 mb-48">
+          <div class="project-card">
+            <a href="project.html" class="project-card__img"><img src="img/project1.jpg" alt=""></a>
+            <div class="project-card__body">
+              <a href="project.html" class="project-card__title h3">Outdoor кухонный <br>гарнитур с отделкой</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mb-48">
+          <div class="project-card">
+            <a href="project.html" class="project-card__img"><img src="img/project2.jpg" alt=""></a>
+            <div class="project-card__body">
+              <a href="project.html" class="project-card__title h3">Зона ТВ <br>
+                в гостиной</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mb-48">
+          <div class="project-card">
+            <a href="project.html" class="project-card__img"><img src="img/project3.jpg" alt=""></a>
+            <div class="project-card__body">
+              <a href="project.html" class="project-card__title h3">Кухонный <br>
+                остров</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 mb-48">
+          <div class="project-card">
+            <a href="project.html" class="project-card__img"><img src="img/project4.jpg" alt=""></a>
+            <div class="project-card__body">
+              <a href="project.html" class="project-card__title h3">прихожая</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <a href="projects.html" class="btn btn-dark m-auto">Все проекты</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="callback-section p-120 bg-light-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-7 col-xl-7">
+          <div class="callback-section__content">
+            <h2>Хотите стать <br>
+              нашим партнером?</h2>
+            <div class="box-text-big">
+              <p>Оставьте свои контактные данные, и мы с вами свяжемся</p>
+            </div>
+
+            <form method="post" class="form-callback">
+              <label><input type="text" name="name" placeholder="Имя" required></label>
+              <label><input type="text" name="phone" placeholder="Телефон" required></label>
+              <h4>Как с вами связаться?</h4>
+              <div class="list-social-radio">
+                <label class="social-radio-item">
+                  <input type="radio" name="contact-method" value="whatsapp" checked>
+                  <span class="social-radio-item__custom"></span>
+                  <span class="radio-text">WhatsApp</span>
+                </label>
+                <label class="social-radio-item">
+                  <input type="radio" name="contact-method" value="Telegram">
+                  <span class="social-radio-item__custom"></span>
+                  <span class="radio-text">Telegram</span>
+                </label>
+                <label class="social-radio-item">
+                  <input type="radio" name="contact-method" value="Телефон">
+                  <span class="social-radio-item__custom"></span>
+                  <span class="radio-text">Телефон</span>
+                </label>
+              </div>
+
+              <div class="form-footer">
+                <label class="label-checkbox">
+                  <input type="checkbox" name="checkbox">
+                  <span class="label-checkbox__custom"></span>
+                  <span class="label-checkbox__text">Нажимая кнопку "Отправить" вы соглашаетесь с политикой обработки
+                    персональных данных</span>
+                </label>
+                <button type="submit" class="btn btn-dark">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5 col-xl-5">
+          <div class="callback-section__image"><img src="img/callback-img.jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4 col-xl-5">
+          <a href="index.html" class="logo"><img src="img/logo-white.svg" alt=""></a>
+          <ul class="menu-documents my-ul font-text">
+            <li><a href="#" target="_blank">Положение об обработке персональных данных</a></li>
+            <li><a href="#" target="_blank">Пользовательское соглашение</a></li>
+            <li><a href="#" target="_blank">Согласие на обработку данных метрическими программами</a></li>
+            <li><a href="#" target="_blank">Согласие на обработку персональных данных</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-4">
+          <nav class="nav-menu nav-menu-footer">
+            <ul class="menu menu-footer my-ul">
+              <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+              <li class="nav-item"><a href="kitchen.html" class="nav-link">Кухня</a></li>
+              <li class="nav-item"><a href="wardrobe.html" class="nav-link">Гардеробная</a></li>
+              <li class="nav-item"><a href="tv-zones.html" class="nav-link">ТВ зоны</a></li>
+              <li class="nav-item"><a href="tables.html" class="nav-link">Столы</a></li>
+              <li class="nav-item"><a href="hallway.html" class="nav-link">Прихожая</a></li>
+              <li class="nav-item"><a href="bathroom.html" class="nav-link">Ванная</a></li>
+              <li class="nav-item"><a href="outdoors.html" class="nav-link">OUTDOORS</a></li>
+              <li class="nav-item"><a href="patents.html" class="nav-link">Патенты</a></li>
+              <li class="nav-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-3">
+          <div class="footer-box">
+            <p class="font-text">Телефон:</p>
+            <a href="tel:88000000000" class="phone h3">8 (800) 00-000-00</a>
+
+
+            <ul class="social-list social-list-white my-ul">
+              <li><a href="#"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#vk-icon"></use>
+                  </svg></a></li>
+              <li><a href="#"><svg class="svg-icon">
+                    <use xlink:href="img/sprite.svg#whatsapp-icon"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="callbackModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h3 class="modal-title">Хотите оставить заявку или появились вопросы?</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+          <div class="box-text-big">
+            <p>Оставьте свои контактные данные, и мы с вами свяжемся</p>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <form method="post" class="form-callback">
+            <label><input type="text" name="name" placeholder="Имя" required></label>
+            <label><input type="text" name="phone" placeholder="Телефон" required></label>
+            <h4>Как с вами связаться?</h4>
+            <div class="list-social-radio">
+              <label class="social-radio-item">
+                <input type="radio" name="contact-method" value="whatsapp" checked>
+                <span class="social-radio-item__custom"></span>
+                <span class="radio-text">WhatsApp</span>
+              </label>
+              <label class="social-radio-item">
+                <input type="radio" name="contact-method" value="Telegram">
+                <span class="social-radio-item__custom"></span>
+                <span class="radio-text">Telegram</span>
+              </label>
+              <label class="social-radio-item">
+                <input type="radio" name="contact-method" value="Телефон">
+                <span class="social-radio-item__custom"></span>
+                <span class="radio-text">Телефон</span>
+              </label>
+            </div>
+
+            <div class="form-footer">
+              <label class="label-checkbox">
+                <input type="checkbox" name="checkbox">
+                <span class="label-checkbox__custom"></span>
+                <span class="label-checkbox__text">Нажимая кнопку "Отправить" вы соглашаетесь с политикой обработки
+                  персональных данных</span>
+              </label>
+              <button type="submit" class="btn btn-dark">Отправить</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-dark" id="thanksModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+
+        <div class="modal-header text-center">
+          <h3 class="modal-title h2">Спасибо! Ваши данные получены!</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><svg class="svg-icon">
+              <use xlink:href="img/sprite.svg#close-icon"></use>
+            </svg></button>
+          <div class="box-text-big">
+            <p>Мы скоро с вами свяжемся</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- add plugins js-->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/fancybox.umd.js"></script>
+  <!-- add plugins js end-->
+
+  <script src="js/common.js"></script>
+
+</body>
+
+</html>
