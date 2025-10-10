@@ -301,4 +301,52 @@ $(document).ready(function () {
 
 });
 
-// accordion
+// toggle projects card
+$(document).ready(function() {
+  const step = 3; // сколько показывать при каждом клике
+
+  function getVisibleCount() {
+    // на мобильных (<768px) — 4, иначе 7
+    return $(window).width() < 768 ? 4 : 7;
+  }
+
+  function initProjects($tabPane) {
+    const $projects = $tabPane.find('.project-col');
+    const $btn = $tabPane.find('.btn-toggle-projects');
+    const visibleCount = getVisibleCount();
+
+    // сначала показать нужное количество, остальные скрыть
+    $projects.hide().slice(0, visibleCount).show();
+
+    // показать кнопку, если карточек больше
+    if ($projects.length > visibleCount) {
+      $btn.show();
+    } else {
+      $btn.hide();
+    }
+
+    // обработчик клика
+    $btn.off('click').on('click', function(e) {
+      e.preventDefault();
+      const $hidden = $projects.filter(':hidden');
+      $hidden.slice(0, step).slideDown(300);
+
+      if ($hidden.length <= step) {
+        $(this).fadeOut(200);
+      }
+    });
+  }
+
+  // инициализация при загрузке
+  $('.tab-pane').each(function() {
+    initProjects($(this));
+  });
+
+  // переинициализация при изменении ширины (например, если повернули экран)
+  $(window).on('resize', function() {
+    $('.tab-pane').each(function() {
+      initProjects($(this));
+    });
+  });
+});
+

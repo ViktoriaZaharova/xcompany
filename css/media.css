@@ -341,6 +341,9 @@
   .accordion-grid {
     grid: none;
   }
+  .accordion:last-child .accordion-item {
+    border-top: none;
+  }
   .accordion-item {
     border: 1px solid #DBDBDB;
   }
@@ -379,6 +382,16 @@
   .about-content .box-text {
     max-width: none;
     margin: 24px 0 0;
+  }
+  .nav-tabs {
+    margin: 0 0 16px;
+    flex-wrap: wrap;
+  }
+  .nav-tabs li {
+    flex: none;
+  }
+  .nav-tabs .nav-link {
+    padding: 24px 44px 24px 0;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -438,10 +451,28 @@
   .modal-dark .modal-content {
     padding: 120px 24px;
   }
+  .project-col {
+    display: none;
+  }
+  .project-col:nth-child(-n+7) {
+    display: none;
+  }
+  .project-col:nth-child(-n+4) {
+    display: block;
+  }
+  .btn-toggle-projects {
+    width: 100%;
+  }
+  .home-projects {
+    padding: 77px 0;
+  }
 }
 @media only screen and (max-width: 576px) {
   .form-footer {
     flex-wrap: wrap;
+  }
+  .form-footer .label-checkbox {
+    padding: 0;
   }
   .form-callback [type=submit] {
     margin: 16px 0 0;
@@ -479,9 +510,15 @@
     padding: 77px 0;
   }
 }
+@media only screen and (max-width: 480px) {
+  h1, .h1 {
+    font-size: 36px;
+  }
+}
 @media only screen and (max-width: 420px) {
   h1, .h1 {
-    font-size: 34px;
+    font-size: 32px;
+    letter-spacing: 0;
   }
   .h2-big, h2, .h2 {
     font-size: 28px;

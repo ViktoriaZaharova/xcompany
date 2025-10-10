@@ -445,3 +445,20 @@
   max-width: 343px;
   margin: 0;
 }
+
+.home-package {
+  background: url("../img/package-home-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.home-projects {
+  background: url("../img/projects-home-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.project-col {
+  display: none;
+}
+.project-col:nth-child(-n+7) {
+  display: block;
+}
