@@ -786,3 +786,8 @@ h4, .h4 {
   color: #1D2126;
   border-color: #1D2126;
 }
+
+.breadcrumb {
+  width: 100%;
+  margin: 0 0 24px;
+}
