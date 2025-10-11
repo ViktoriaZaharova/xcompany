@@ -529,3 +529,74 @@
 .contacts-box a:hover {
   color: rgba(255, 255, 255, 0.6);
 }
+
+.home-project {
+  padding: 222px 0;
+  background: url("../img/outdoor-home-bg.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.project-image {
+  width: 100%;
+}
+.project-image__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-image__name {
+  width: 100%;
+  padding: 16px 0;
+  color: rgba(25, 41, 57, 0.8);
+  border-bottom: 1px solid #dbdbdb;
+}
+.project-image__description {
+  max-width: 880px;
+  width: 100%;
+  margin: 32px auto 0;
+}
+
+.projects-target {
+  width: 100%;
+}
+.projects-target__image img {
+  width: 100%;
+}
+.projects-target__text {
+  max-width: 580px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.projects-target h2 {
+  margin: 0 0 16px;
+}
+.projects-target .box-text {
+  color: rgba(25, 41, 57, 0.8);
+  max-width: 430px;
+}
+.projects-target ul li {
+  margin: 0 0 24px;
+}
+.projects-target ul li:last-child {
+  margin: 0;
+}
+.projects-target h3 {
+  margin: 0 0 16px;
+}
+
+.projects-result {
+  padding: 64px 0 120px;
+}
+.projects-result__description {
+  max-width: 984px;
+  width: 100%;
+  margin: 0 auto 32px;
+}
+.projects-result h2 {
+  margin: 0 0 32px;
+}

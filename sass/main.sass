@@ -433,3 +433,61 @@
   a
     &:hover
       color: $white-60
+
+// project page
+.home-project
+  padding: 222px 0
+  background: url('../img/outdoor-home-bg.jpg') no-repeat center
+  background-size: cover
+
+.project-image
+  width: 100%
+  &__item
+    width: 100%
+    @include d-flex
+  &__name
+    width: 100%
+    padding: 16px 0
+    color: $dark-60
+    border-bottom: 1px solid $gray-stroke
+  &__description
+    max-width: 880px
+    width: 100%
+    margin: 32px auto 0
+
+.projects-target
+  width: 100%
+  &__image
+    img
+      width: 100%
+  &__text
+    max-width: 580px
+    width: 100%
+    margin: 0 auto
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+  h2
+    margin: 0 0 16px
+  .box-text
+    color: $dark-60
+    max-width: 430px
+  ul
+    li
+      margin: 0 0 24px
+      &:last-child
+        margin: 0      
+  h3
+    margin: 0 0 16px
+
+.projects-result
+  padding: 64px 0 120px
+  &__description
+    max-width: 984px
+    width: 100%
+    margin: 0 auto 32px
+  h2
+    margin: 0 0 32px
+
+
