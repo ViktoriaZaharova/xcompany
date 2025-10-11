@@ -644,4 +644,35 @@ h4, .h4
 .breadcrumb
   width: 100%
   margin: 0 0 24px
+  font-size: 18px
+  line-height: 22px
+  font-family: $font
+  font-weight: normal
+  letter-spacing: 0.3px
+  li
+    a
+      padding: 0
+      color: $dark
+      &:hover
+        color: $white-60  
+      &:after
+        content: '/'
+        margin: 0 10px
+
+.breadcrumb-white
+  li
+    a
+      color: #fff
+      &:hover
+        color: $white-60  
+
+.breadcrumb-item+.breadcrumb-item
+  padding: 0
+  &::before
+    display: none
+
+.breadcrumb-item.active
+  color: $white-60  
+
+
   

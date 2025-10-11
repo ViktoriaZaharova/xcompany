@@ -790,4 +790,38 @@ h4, .h4 {
 .breadcrumb {
   width: 100%;
   margin: 0 0 24px;
+  font-size: 18px;
+  line-height: 22px;
+  font-family: "AvenirNextCyr", sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.3px;
+}
+.breadcrumb li a {
+  padding: 0;
+  color: #1D2126;
+}
+.breadcrumb li a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.breadcrumb li a:after {
+  content: "/";
+  margin: 0 10px;
+}
+
+.breadcrumb-white li a {
+  color: #fff;
+}
+.breadcrumb-white li a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding: 0;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  display: none;
+}
+
+.breadcrumb-item.active {
+  color: rgba(255, 255, 255, 0.6);
 }
