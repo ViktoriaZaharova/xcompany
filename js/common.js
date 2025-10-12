@@ -141,10 +141,10 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 // menu active link
-$(document).ready(function() {
+$(document).ready(function () {
   var currentUrl = window.location.pathname; // текущий путь, например /catalog.html
 
-  $('.menu-header a').each(function() {
+  $('.menu-header a').each(function () {
     var linkUrl = $(this).attr('href');
 
     // Проверяем совпадение пути
@@ -154,10 +154,10 @@ $(document).ready(function() {
   });
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
   var currentUrl = window.location.pathname; // текущий путь, например /catalog.html
 
-  $('.header-bottom-menu a').each(function() {
+  $('.header-bottom-menu a').each(function () {
     var linkUrl = $(this).attr('href');
 
     // Проверяем совпадение пути
@@ -168,7 +168,7 @@ $(document).ready(function() {
 });
 
 // menu header-bottom
-$(function() {
+$(function () {
   // проверка (опционально)
   if (typeof jQuery === 'undefined') {
     console.error('jQuery не найден');
@@ -179,7 +179,7 @@ $(function() {
   var $menu = $('.header-bottom');
 
   // клик по кнопке — остановим всплытие, переключаем классы
-  $btn.on('click', function(e) {
+  $btn.on('click', function (e) {
     e.stopPropagation();         // <- самое главное
     e.preventDefault();      // используй только если это <a href="#"> и нужно блокировать переход
     $(this).toggleClass('active');
@@ -188,19 +188,19 @@ $(function() {
   });
 
   // клик внутри меню не закрывает
-  $menu.on('click', function(e) {
+  $menu.on('click', function (e) {
     e.stopPropagation();         // <- нужно, чтобы document click не срабатывал
   });
 
   // клик вне — закрываем
-  $(document).on('click', function() {
+  $(document).on('click', function () {
     $btn.removeClass('active');
     $menu.removeClass('open');
     $('body').removeClass('no-scroll');
   });
 
   // Esc — тоже закрываем
-  $(document).on('keydown', function(e) {
+  $(document).on('keydown', function (e) {
     if (e.key === 'Escape' || e.keyCode === 27) {
       $btn.removeClass('active');
       $menu.removeClass('open');
@@ -302,7 +302,7 @@ $(document).ready(function () {
 });
 
 // toggle projects card
-$(document).ready(function() {
+$(document).ready(function () {
   const step = 3; // сколько показывать при каждом клике
 
   function getVisibleCount() {
@@ -326,7 +326,7 @@ $(document).ready(function() {
     }
 
     // обработчик клика
-    $btn.off('click').on('click', function(e) {
+    $btn.off('click').on('click', function (e) {
       e.preventDefault();
       const $hidden = $projects.filter(':hidden');
       $hidden.slice(0, step).slideDown(300);
@@ -338,15 +338,32 @@ $(document).ready(function() {
   }
 
   // инициализация при загрузке
-  $('.tab-pane').each(function() {
+  $('.tab-pane').each(function () {
     initProjects($(this));
   });
 
   // переинициализация при изменении ширины (например, если повернули экран)
-  $(window).on('resize', function() {
-    $('.tab-pane').each(function() {
+  $(window).on('resize', function () {
+    $('.tab-pane').each(function () {
       initProjects($(this));
     });
   });
 });
 
+// slick slider
+$('.similar-slider').slick({
+  slidesToShow: 2,
+  appendArrows: '.similar-slider__nav',
+  prevArrow: '<button type="button" class="slick-prev"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-left"></use></svg></button>',
+  nextArrow: '<button type="button" class="slick-next"><svg class="svg-icon"><use xlink:href="img/sprite.svg#arrow-right"></use></svg></button>',
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        variableWidth: true
+      }
+    }
+    
+  ]
+});

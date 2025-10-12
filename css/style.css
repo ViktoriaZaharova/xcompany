@@ -631,6 +631,60 @@ h4, .h4 {
   outline: none;
 }
 
+.slider-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 0 0 auto;
+}
+
+.slick-arrow {
+  background: #1D2126;
+  border: 1px solid #1D2126;
+  border-radius: 0;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  margin: 0 16px 0 0;
+  fill: #fff;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slick-arrow:last-child {
+  margin: 0;
+}
+.slick-arrow:hover {
+  background: #fff;
+  fill: #1D2126;
+}
+.slick-arrow:focus {
+  background: rgba(25, 41, 57, 0.8);
+  border-color: rgba(25, 41, 57, 0.8);
+  fill: #fff;
+}
+
+.slider-stretch {
+  overflow: hidden;
+}
+.slider-stretch .slick-list {
+  margin: 0 -24px;
+}
+.slider-stretch .slick-track {
+  display: flex;
+  align-items: stretch;
+}
+.slider-stretch .slick-slide {
+  height: auto;
+  padding: 0 24px;
+}
+
 .label-checkbox {
   position: relative;
   display: flex;

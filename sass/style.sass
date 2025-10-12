@@ -497,6 +497,51 @@ h4, .h4
 .slick-slide
   outline: none
 
+.slider-nav
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: flex-end
+  margin: 0 0 0 auto  
+
+.slick-arrow
+  background: $dark
+  border: 1px solid $dark
+  border-radius: 0
+  width: 52px
+  height: 52px
+  min-width: 52px
+  margin: 0 16px 0 0
+  fill: #fff
+  position: relative
+  z-index: 1
+  opacity: 1
+  box-sizing: border-box
+  padding: 10px
+  @include d-flex  
+  &:last-child
+    margin: 0
+  &:hover
+    background: #fff
+    fill: $dark  
+  &:focus
+    background: $dark-60
+    border-color: $dark-60
+    fill: #fff  
+
+.slider-stretch
+  overflow: hidden
+  .slick-list
+    margin: 0 -24px
+  .slick-track
+    display: flex
+    align-items: stretch
+  .slick-slide
+    height: auto
+    padding: 0 24px  
+
+
+
 //checkbox my
 .label-checkbox
   position: relative
