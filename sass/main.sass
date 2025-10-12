@@ -66,8 +66,6 @@
 
 // tehnology section
 .tehnology-company
-  .box-text
-    color: $dark-60
   .basic-principle
     margin: 164px 0 0
 
@@ -86,8 +84,6 @@
   padding: 0 0 0 150px
   h3
     margin: 0 0 16px
-  .box-text
-    color: $dark-60
 
 .tehnology-video
   width: 100%
@@ -177,16 +173,14 @@
   .advantages-row-box
     padding: 0 32px
     &:first-child
-      width: 38%
+      width: 39%
     &:nth-child(2)
-      width: 25%
+      width: 28%
     &:last-child
-      width: 37%
+      width: 33%
   .image-wrapper
     width: 194px
     height: 271px
-  .box-text
-    color: $dark-60
 
 // projects
 .project-card
@@ -257,7 +251,6 @@
   .box-text
     max-width: 400px
     margin-left: auto
-    color: $dark-60
     .btn
       margin: 24px 0 0
 
@@ -349,7 +342,6 @@
   .box-text
     margin: 10px 0 0
     max-width: 500px
-    color: $dark-60
 
 .about-content
   width: 100%
@@ -406,7 +398,6 @@
     height: 100%
     object-fit: cover
     filter: grayscale(100%)
-
 
 .contacts-box
   margin: 0 0 24px
@@ -471,13 +462,12 @@
   h2
     margin: 0 0 16px
   .box-text
-    color: $dark-60
     max-width: 430px
   ul
     li
       margin: 0 0 24px
       &:last-child
-        margin: 0      
+        margin: 0
   h3
     margin: 0 0 16px
 
@@ -490,7 +480,6 @@
   h2
     margin: 0 0 32px
 
-
 // project page
 .home-project-page
   background: url('../img/project-home-page.jpg') no-repeat center
@@ -501,21 +490,20 @@
   .box-text
     max-width: 580px
     width: 100%
-    margin: 12px 0 0  
+    margin: 12px 0 0
   &__img
     width: 100%
     height: 100%
     background: #fff
-    @include d-flex  
-  
+    @include d-flex
+
 .price-wrapper
   margin: 0 24px 0 0
   h4
     margin: 4px 0 0
     color: $dark
   p
-    color: $dark-40  
-
+    color: $dark-40
 
 .form-calculate
   max-width: none
@@ -529,12 +517,15 @@
     color: $dark-60
     font-weight: 600
   &:last-child
-    margin: 0  
+    margin: 0
+
+.about-project-section
+  padding: 120px 0 0
 
 .about-project
-  padding: 120px 0 0
-  .box-text
-    color: $dark-60
+  margin: 0 0 120px
+  &:last-child
+    margin: 0
   &__img
     width: 100%
     @include d-flex
@@ -550,9 +541,9 @@
       margin: auto 0 0
     .box-text
       margin: 16px 0 0
-      font-size: 18px  
+      font-size: 18px
       ul
-        font-size: 16px 
+        font-size: 16px
 
 .about-project__img-max
   height: 675px
@@ -560,3 +551,117 @@
     height: 100%
     object-fit: cover
 
+// about page
+.home-about
+  background: url('../img/about-home-bg.jpg') no-repeat center
+  background-size: cover
+  padding: 222px 0
+
+.about-greetings-content
+  max-width: 1060px
+  width: 100%
+  margin: 0 auto
+  padding: 48px 0
+  h4
+    margin: 0 0 24px
+  .box-text
+    margin: 24px auto 0
+    max-width: 500px
+    width: 100%
+
+.about-mission
+  &__content
+    max-width: 602px
+    margin: 0 0 0 auto
+  h3
+    margin: 0 0 16px
+  .box-text
+    font-size: 18px
+
+.quote-icon
+  font-size: 200px
+  line-height: 15%
+  font-weight: 600
+  letter-spacing: 0.3px
+
+.about-advantages-wrapper
+  width: 100%
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+
+.about-advantages-item
+  min-height: 732px
+  flex: 1
+  border: 1px solid $gray-stroke
+  padding: 48px
+  border-right: none
+  &:last-child
+    border-right: 1px solid $gray-stroke
+  &.about-advantages-item__img
+    width: 100%
+    @include d-flex
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 80px
+  h3
+    margin: 0 0 32px
+  h4
+    margin: 0 auto 32px
+    max-width: 335px
+    width: 100%
+
+.about-system
+  .tehnology-box
+    margin: 120px 0 0
+    max-width: 640px
+  .box-text
+    max-width: 640px
+    margin: 16px 0 0
+
+.about-safety
+  .about-advantages-item
+    min-height: 544px
+
+.map-container
+  position: relative
+
+.map-container svg
+  display: block
+  max-width: 100%
+  height: auto
+
+.map-container svg path
+  transition: fill 0.25s ease, stroke 0.25s ease, opacity 0.25s ease
+  cursor: pointer
+  pointer-events: all
+
+  &.highlight
+    fill: #ffcc00 !important
+    opacity: 0.8 !important
+    stroke: #333
+    stroke-width: 1
+
+.map-tooltip
+  position: absolute
+  display: none
+  pointer-events: none
+  padding: 6px 10px
+  background: #ffffff
+  border: 1px solid rgba(0,0,0,0.6)
+  border-radius: 4px
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15)
+  font-size: 13px
+  z-index: 9999
+  white-space: nowrap
+
+.map-delivery
+  .box-text
+    margin: 0 0 0 24px
+    max-width: 390px

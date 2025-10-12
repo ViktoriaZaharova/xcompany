@@ -425,6 +425,9 @@ h4, .h4 {
   line-height: 100%;
 }
 
+.box-text {
+  color: rgba(25, 41, 57, 0.8);
+}
 .box-text p {
   margin: 0 0 16px;
 }
@@ -439,8 +442,23 @@ h4, .h4 {
   letter-spacing: 0.5px;
 }
 
+.title-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.title-wrapper h2 {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .font-text {
   font-family: "AvenirNextCyr", sans-serif;
+}
+
+.p-0 {
+  padding: 0;
 }
 
 .p-120 {

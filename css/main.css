@@ -73,9 +73,6 @@
   padding: 115px 0 606px;
 }
 
-.tehnology-company .box-text {
-  color: rgba(25, 41, 57, 0.8);
-}
 .tehnology-company .basic-principle {
   margin: 164px 0 0;
 }
@@ -97,9 +94,6 @@
 }
 .basic-principle h3 {
   margin: 0 0 16px;
-}
-.basic-principle .box-text {
-  color: rgba(25, 41, 57, 0.8);
 }
 
 .tehnology-video {
@@ -214,20 +208,17 @@
   padding: 0 32px;
 }
 .advantages-row .advantages-row-box:first-child {
-  width: 38%;
+  width: 39%;
 }
 .advantages-row .advantages-row-box:nth-child(2) {
-  width: 25%;
+  width: 28%;
 }
 .advantages-row .advantages-row-box:last-child {
-  width: 37%;
+  width: 33%;
 }
 .advantages-row .image-wrapper {
   width: 194px;
   height: 271px;
-}
-.advantages-row .box-text {
-  color: rgba(25, 41, 57, 0.8);
 }
 
 .project-card {
@@ -319,7 +310,6 @@
 .cooperation-section .box-text {
   max-width: 400px;
   margin-left: auto;
-  color: rgba(25, 41, 57, 0.8);
 }
 .cooperation-section .box-text .btn {
   margin: 24px 0 0;
@@ -428,7 +418,6 @@
 .about-section .box-text {
   margin: 10px 0 0;
   max-width: 500px;
-  color: rgba(25, 41, 57, 0.8);
 }
 
 .about-content {
@@ -576,7 +565,6 @@
   margin: 0 0 16px;
 }
 .projects-target .box-text {
-  color: rgba(25, 41, 57, 0.8);
   max-width: 430px;
 }
 .projects-target ul li {
@@ -650,11 +638,15 @@
   margin: 0;
 }
 
-.about-project {
+.about-project-section {
   padding: 120px 0 0;
 }
-.about-project .box-text {
-  color: rgba(25, 41, 57, 0.8);
+
+.about-project {
+  margin: 0 0 120px;
+}
+.about-project:last-child {
+  margin: 0;
 }
 .about-project__img {
   width: 100%;
@@ -690,4 +682,141 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.home-about {
+  background: url("../img/about-home-bg.jpg") no-repeat center;
+  background-size: cover;
+  padding: 222px 0;
+}
+
+.about-greetings-content {
+  max-width: 1060px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+.about-greetings-content h4 {
+  margin: 0 0 24px;
+}
+.about-greetings-content .box-text {
+  margin: 24px auto 0;
+  max-width: 500px;
+  width: 100%;
+}
+
+.about-mission__content {
+  max-width: 602px;
+  margin: 0 0 0 auto;
+}
+.about-mission h3 {
+  margin: 0 0 16px;
+}
+.about-mission .box-text {
+  font-size: 18px;
+}
+
+.quote-icon {
+  font-size: 200px;
+  line-height: 15%;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.about-advantages-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.about-advantages-item {
+  min-height: 732px;
+  flex: 1;
+  border: 1px solid #dbdbdb;
+  padding: 48px;
+  border-right: none;
+}
+.about-advantages-item:last-child {
+  border-right: 1px solid #dbdbdb;
+}
+.about-advantages-item.about-advantages-item__img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-advantages-item.about-advantages-item__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-advantages-item__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+}
+.about-advantages-item h3 {
+  margin: 0 0 32px;
+}
+.about-advantages-item h4 {
+  margin: 0 auto 32px;
+  max-width: 335px;
+  width: 100%;
+}
+
+.about-system .tehnology-box {
+  margin: 120px 0 0;
+  max-width: 640px;
+}
+.about-system .box-text {
+  max-width: 640px;
+  margin: 16px 0 0;
+}
+
+.about-safety .about-advantages-item {
+  min-height: 544px;
+}
+
+.map-container {
+  position: relative;
+}
+
+.map-container svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.map-container svg path {
+  transition: fill 0.25s ease, stroke 0.25s ease, opacity 0.25s ease;
+  cursor: pointer;
+  pointer-events: all;
+}
+.map-container svg path.highlight {
+  fill: #ffcc00 !important;
+  opacity: 0.8 !important;
+  stroke: #333;
+  stroke-width: 1;
+}
+
+.map-tooltip {
+  position: absolute;
+  display: none;
+  pointer-events: none;
+  padding: 6px 10px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 13px;
+  z-index: 9999;
+  white-space: nowrap;
+}
+
+.map-delivery .box-text {
+  margin: 0 0 0 24px;
+  max-width: 390px;
 }

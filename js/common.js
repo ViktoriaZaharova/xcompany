@@ -367,3 +367,90 @@ $('.similar-slider').slick({
     
   ]
 });
+
+
+// map tooltip svg
+$(function() {
+  // Если тултипа нет в DOM, создаём и добавляем в body
+  var $tooltip = $('.map-tooltip');
+  if ($tooltip.length === 0) {
+    $tooltip = $('<div class="map-tooltip"></div>').appendTo('body');
+  }
+
+  // селектор для областей
+  var $areas = $('.map-container svg').find('path');
+
+  // Отладочный лог: если нет областей — покажем warn
+  if ($areas.length === 0) {
+    console.warn('map tooltip: SVG paths not found. Make sure SVG is inline inside .map-container.');
+  }
+
+  // Помощник для корректного позиционирования (не вылезает за экран)
+  function placeTooltip($tt, pageX, pageY) {
+    var pad = 10;
+    var ttW = $tt.outerWidth();
+    var ttH = $tt.outerHeight();
+    var winW = $(window).width();
+    var winH = $(window).height();
+    var left = pageX + 12;
+    var top = pageY + 12;
+
+    // если выходит за правый край
+    if (left + ttW + pad > $(window).scrollLeft() + winW) {
+      left = pageX - ttW - 12;
+    }
+    // если выходит за нижний край
+    if (top + ttH + pad > $(window).scrollTop() + winH) {
+      top = pageY - ttH - 12;
+    }
+    $tt.css({ left: left + 'px', top: top + 'px' });
+  }
+
+  // Наведение
+  $areas.on('mouseenter', function(e) {
+    var $this = $(this);
+    var title = $this.attr('data-title') || $this.attr('title') || 'Без названия';
+    // debug: покажем что нашли
+    // console.log('mouseenter', title);
+
+    // Добавляем класс подсветки
+    $this.addClass('highlight');
+
+    // Устанавливаем текст тултипа
+    $tooltip.text(title).fadeIn(120);
+
+    // начальное позиционирование
+    placeTooltip($tooltip, e.pageX, e.pageY);
+  });
+
+  // Движение мыши
+  $areas.on('mousemove', function(e) {
+    placeTooltip($tooltip, e.pageX, e.pageY);
+  });
+
+  // Уход
+  $areas.on('mouseleave', function(e) {
+    $(this).removeClass('highlight');
+    $tooltip.stop(true, true).fadeOut(80);
+  });
+
+  // На touch-устройствах: показываем по touchstart, скрываем по touchend
+  $areas.on('touchstart', function(e) {
+    var $this = $(this);
+    var title = $this.attr('data-title') || 'Без названия';
+    $this.addClass('highlight');
+    $tooltip.text(title).show();
+    // позиционируем в центре элемента
+    var rect = this.getBoundingClientRect();
+    var pageX = rect.left + rect.width / 2 + window.pageXOffset;
+    var pageY = rect.top + rect.height / 2 + window.pageYOffset;
+    placeTooltip($tooltip, pageX, pageY);
+    // предотвращаем дальнейшее всплытие
+    e.preventDefault();
+  });
+
+  $(document).on('touchend touchcancel', function() {
+    $areas.removeClass('highlight');
+    $tooltip.hide();
+  });
+});
