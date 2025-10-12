@@ -228,6 +228,7 @@ textarea {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.3px;
+  padding: 0;
 }
 
 .social-radio-item {
@@ -279,6 +280,12 @@ textarea {
 }
 .social-radio-item:focus {
   border-color: rgba(25, 41, 57, 0.8);
+}
+
+.radio-item {
+  flex: none;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 button, .btn {
@@ -440,6 +447,10 @@ h4, .h4 {
   padding: 120px 0;
 }
 
+.mb-24 {
+  margin-bottom: 24px;
+}
+
 .mb-32 {
   margin-bottom: 32px;
 }
@@ -456,6 +467,10 @@ h4, .h4 {
   margin-bottom: 120px;
 }
 
+.m-120 {
+  margin: 120px 0;
+}
+
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -463,6 +478,10 @@ h4, .h4 {
 .bg-dark {
   background: #1D2126;
   color: #ffffff;
+}
+
+.bg-white {
+  background: #fff;
 }
 
 .bg-light-gray {
