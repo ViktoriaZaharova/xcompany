@@ -112,6 +112,27 @@
     padding: 24px
     max-width: none
 
+  .about-advantages-item
+    min-height: auto
+    padding: 24px
+    h4
+      max-width: none
+      margin: 0 auto 24px
+
+  .about-safety .about-advantages-item
+    min-height: auto
+
+  .team-card
+    padding: 24px
+    &__photo
+      height: 440px
+    &__body
+      height: calc( 100% - 440px )
+
+  .advantages-section .box-text-title
+    margin: 24px 0 48px
+    max-width: none
+
 @media only screen and (max-width: 992px)
   h1, .h1
     font-size: 60px
@@ -383,7 +404,7 @@
     margin: 24px 0 48px
 
   .projects-target
-    margin-bottom: 24px  
+    margin-bottom: 24px
 
   .projects-target__text
     max-width: none
@@ -397,19 +418,19 @@
 
   .project-image__description
     max-width: none
-    margin: 24px auto 0  
+    margin: 24px auto 0
 
-  .mt-lg-24 
+  .mt-lg-24
     margin-top: 24px
 
-  .mb-lg-24 
-    margin-bottom: 24px  
+  .mb-lg-24
+    margin-bottom: 24px
 
-  .mb-lg-56 
-    margin-bottom: 56px  
-    
+  .mb-lg-56
+    margin-bottom: 56px
+
   .mt-lg-48
-    margin-top: 48px    
+    margin-top: 48px
 
   .mb-120
     margin-bottom: 48px
@@ -420,7 +441,6 @@
   .home-project-page
     padding: 77px 0
 
-
   .about-project-section
     padding: 64px 0 0
 
@@ -429,16 +449,16 @@
     &:last-child
       margin: 0
     h3
-      margin: 0 0 24px    
+      margin: 0 0 24px
 
   .about-project__body .about-project__img
     margin: 24px 0 0
 
   .about-project__body .box-text
-    margin: 0  
+    margin: 0
 
   .about-project__img-max
-    height: auto  
+    height: auto
 
   .calculation-prices__img
     margin: 0 0 24px
@@ -447,7 +467,56 @@
     margin: 24px 0 0
 
   .calculation-prices .box-text
-    max-width: none        
+    max-width: none
+
+  .home-about
+    padding: 97.5px 0
+
+  .about-greetings-content
+    padding: 24px
+
+  .about-mission__content
+    max-width: none
+    margin: 65px 0 0
+
+  .quote-icon
+    font-size: 150px
+
+  .about-advantages-wrapper
+    flex-wrap: wrap
+
+  .about-advantages-item
+    flex: none
+    width: 100%
+    border: 1px solid #DBDBDB
+    border-bottom: none
+    &:last-child
+      border-bottom: 1px solid #DBDBDB
+
+  .about-system .tehnology-box
+    margin: 24px 0 0
+
+  .about-system .box-text
+    max-width: none
+
+  .team-card
+    &__photo
+      height: 300px
+    &__body
+      height: calc( 100% - 300px )  
+
+  .map-delivery .box-text
+    max-width: none
+    margin: 8px 0 0
+    br
+      display: none
+
+  .certificates-item
+    &__img   
+      height: 404px
+    &__body
+      height: calc( 100% - 404px )
+
 
 @media only screen and (max-width: 768px)
   h1, .h1
@@ -541,9 +610,12 @@
 
   .similar-slider
     .slick-slide
-      width: 384px      
+      width: 384px
 
 @media only screen and (max-width: 576px)
+  h4
+    font-size: 18px
+
   .form-footer
     flex-wrap: wrap
     .label-checkbox
@@ -584,6 +656,18 @@
   .home-partners
     padding: 77px 0
 
+  .team-slider, .certificates-slider
+    .slick-slide
+      width: 314px
+
+  .team-card
+    &__photo
+      height: 290px
+    &__body
+      height: calc( 100% - 290px )
+
+  
+
 @media only screen and (max-width: 480px)
   h1, .h1
     font-size: 36px
@@ -598,7 +682,7 @@
     letter-spacing: 0
 
   .box-text-big
-    font-size: 20px  
+    font-size: 20px
 
   .partners-item
     height: 60px
@@ -653,7 +737,7 @@
     min-width: 48px
     margin: 0 10px 0 0
     &:last-child
-      margin: 0 
+      margin: 0
 
 @media only screen and (max-width: 370px)
   .logo

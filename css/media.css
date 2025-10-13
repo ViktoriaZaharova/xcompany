@@ -114,6 +114,30 @@
     padding: 24px;
     max-width: none;
   }
+  .about-advantages-item {
+    min-height: auto;
+    padding: 24px;
+  }
+  .about-advantages-item h4 {
+    max-width: none;
+    margin: 0 auto 24px;
+  }
+  .about-safety .about-advantages-item {
+    min-height: auto;
+  }
+  .team-card {
+    padding: 24px;
+  }
+  .team-card__photo {
+    height: 440px;
+  }
+  .team-card__body {
+    height: calc(100% - 440px);
+  }
+  .advantages-section .box-text-title {
+    margin: 24px 0 48px;
+    max-width: none;
+  }
 }
 @media only screen and (max-width: 992px) {
   h1, .h1 {
@@ -470,6 +494,56 @@
   .calculation-prices .box-text {
     max-width: none;
   }
+  .home-about {
+    padding: 97.5px 0;
+  }
+  .about-greetings-content {
+    padding: 24px;
+  }
+  .about-mission__content {
+    max-width: none;
+    margin: 65px 0 0;
+  }
+  .quote-icon {
+    font-size: 150px;
+  }
+  .about-advantages-wrapper {
+    flex-wrap: wrap;
+  }
+  .about-advantages-item {
+    flex: none;
+    width: 100%;
+    border: 1px solid #DBDBDB;
+    border-bottom: none;
+  }
+  .about-advantages-item:last-child {
+    border-bottom: 1px solid #DBDBDB;
+  }
+  .about-system .tehnology-box {
+    margin: 24px 0 0;
+  }
+  .about-system .box-text {
+    max-width: none;
+  }
+  .team-card__photo {
+    height: 300px;
+  }
+  .team-card__body {
+    height: calc(100% - 300px);
+  }
+  .map-delivery .box-text {
+    max-width: none;
+    margin: 8px 0 0;
+  }
+  .map-delivery .box-text br {
+    display: none;
+  }
+  .certificates-item__img {
+    height: 404px;
+  }
+  .certificates-item__body {
+    height: calc(100% - 404px);
+  }
 }
 @media only screen and (max-width: 768px) {
   h1, .h1 {
@@ -566,6 +640,9 @@
   }
 }
 @media only screen and (max-width: 576px) {
+  h4 {
+    font-size: 18px;
+  }
   .form-footer {
     flex-wrap: wrap;
   }
@@ -606,6 +683,15 @@
   }
   .home-partners {
     padding: 77px 0;
+  }
+  .team-slider .slick-slide, .certificates-slider .slick-slide {
+    width: 314px;
+  }
+  .team-card__photo {
+    height: 290px;
+  }
+  .team-card__body {
+    height: calc(100% - 290px);
   }
 }
 @media only screen and (max-width: 480px) {
