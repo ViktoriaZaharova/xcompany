@@ -2,7 +2,7 @@
   width: 100%;
   position: relative;
   z-index: 1;
-  padding: 394px 0 423px;
+  padding: 420px 0 330px;
   background: url(../img/home-bg.jpg) no-repeat center;
   background-size: cover;
 }
@@ -99,6 +99,7 @@
 .tehnology-video {
   width: 100%;
   max-width: 875px;
+  height: 453px;
   margin-left: auto;
   display: flex;
   align-items: center;
@@ -106,6 +107,9 @@
 }
 .tehnology-video video {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .innovation-section {
@@ -168,6 +172,16 @@
 .video-wrapper {
   position: relative;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1078px;
+}
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .play-btn {
@@ -353,6 +367,7 @@
   padding: 48px;
   max-width: 50%;
   width: 100%;
+  z-index: 3;
 }
 .sustainability-content .box-text {
   margin: 24px 0 0;
@@ -367,12 +382,51 @@
   justify-content: flex-end;
   border-right: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb;
+  position: relative;
+  z-index: 1;
+}
+.sustainability-item:hover {
+  color: #ffffff;
+}
+.sustainability-item:hover .box-text {
+  color: rgba(255, 255, 255, 0.6);
+}
+.sustainability-item:hover .sustainability-item__img {
+  opacity: 1;
+}
+.sustainability-item:nth-child(2):hover {
+  color: #1D2126;
+}
+.sustainability-item:nth-child(2):hover .box-text {
+  color: rgba(25, 41, 57, 0.8);
 }
 .sustainability-item:last-child {
   border-right: none;
 }
+.sustainability-item:last-child:hover {
+  color: #1D2126;
+}
+.sustainability-item:last-child:hover .box-text {
+  color: rgba(25, 41, 57, 0.8);
+}
 .sustainability-item__img {
-  display: none;
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sustainability-item__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .sustainability-item__body {
   padding: 48px;

@@ -5,7 +5,7 @@
   width: 100%
   position: relative
   z-index: 1
-  padding: 394px 0 423px
+  padding: 420px 0 330px
   background: url(../img/home-bg.jpg) no-repeat center
   background-size: cover
   &::before
@@ -22,12 +22,13 @@
     z-index: 3
 
 .logo-animate
-
   margin: auto
   max-width: 507px
   width: 100%
   animation: float 3.5s ease-in-out infinite
   @include d-flex
+  
+
 
 @keyframes float
   0%
@@ -88,10 +89,13 @@
 .tehnology-video
   width: 100%
   max-width: 875px
+  height: 453px
   margin-left: auto
   @include d-flex
   video
     width: 100%
+    height: 100%
+    object-fit: cover
 
 // innovation-section
 .innovation-section
@@ -140,6 +144,14 @@
 .video-wrapper
   position: relative
   z-index: 1
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 1078px
+  video
+    width: 100%
+    height: 100%
+    object-fit: cover
 
 .play-btn
   position: absolute
@@ -286,6 +298,7 @@
   padding: 48px
   max-width: 50%
   width: 100%
+  z-index: 3
   .box-text
     margin: 24px 0 0
     max-width: 650px
@@ -298,10 +311,41 @@
   justify-content: flex-end
   border-right: 1px solid $gray-stroke
   border-bottom: 1px solid $gray-stroke
+  position: relative
+  z-index: 1
+  &:hover
+    color: $white
+    .box-text
+      color: $white-60
+    .sustainability-item
+      &__img
+        opacity: 1
+  &:nth-child(2)
+    
+    &:hover
+      color: $dark
+      .box-text
+        color: $dark-60      
   &:last-child
     border-right: none
+    &:hover
+      color: $dark
+      .box-text
+        color: $dark-60
   &__img
-    display: none
+    opacity: 0
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    z-index: -1
+    transition: .3s ease
+    @include d-flex
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
   &__body
     padding: 48px
     width: 100%

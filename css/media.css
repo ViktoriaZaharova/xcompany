@@ -37,6 +37,17 @@
     padding: 10px 0;
   }
 }
+@media only screen and (max-width: 1600px) {
+  .home {
+    padding: 300px 0 250px;
+  }
+  .video-wrapper {
+    height: 700px;
+  }
+  .container {
+    max-width: 1440px;
+  }
+}
 @media only screen and (max-width: 1440px) {
   h2, .h2 {
     font-size: 36px;
@@ -159,7 +170,7 @@
     font-size: 24px;
   }
   .home {
-    padding: 175px 0;
+    padding: 175px 0 115px;
   }
   .logo-animate {
     max-width: 354px;
@@ -290,6 +301,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+  }
+  .sustainability-item:hover {
+    color: #1D2126;
+  }
+  .sustainability-item:hover .box-text {
+    color: rgba(25, 41, 57, 0.8);
+  }
+  .sustainability-item:nth-child(2) {
+    color: #1D2126;
+  }
+  .sustainability-item:nth-child(2) .box-text {
+    color: rgba(25, 41, 57, 0.8);
   }
   .sustainability-item__body {
     padding: 32px 24px;
@@ -312,7 +338,7 @@
     margin: 16px 0 0;
   }
   .cooperation-image {
-    margin: 16px auto 0;
+    margin: 16px auto;
   }
   .callback-section__image {
     border: none;
@@ -331,6 +357,7 @@
     align-items: center;
     text-align: center;
     margin: 48px 0 0;
+    height: auto;
   }
   footer {
     padding: 64px 0;
@@ -563,7 +590,7 @@
     padding: 24px 28px;
   }
   .category-image {
-    max-width: 546px;
+    max-width: 100%;
   }
   .advantages-row .advantages-row-box:first-child {
     width: 100%;
@@ -638,6 +665,9 @@
   .similar-slider .slick-slide {
     width: 384px;
   }
+  .partners-item {
+    height: 60px;
+  }
 }
 @media only screen and (max-width: 576px) {
   h4 {
@@ -693,6 +723,9 @@
   .team-card__body {
     height: calc(100% - 290px);
   }
+  .partners-item {
+    height: 55px;
+  }
 }
 @media only screen and (max-width: 480px) {
   h1, .h1 {
@@ -712,7 +745,6 @@
     font-size: 20px;
   }
   .partners-item {
-    height: 60px;
     padding: 10px 15px;
     margin: 0 12px 12px 0;
   }
@@ -780,5 +812,8 @@
   }
   .text-indent-2 {
     text-indent: 10px;
+  }
+  .category-section-item {
+    padding: 64px 0 126px;
   }
 }
