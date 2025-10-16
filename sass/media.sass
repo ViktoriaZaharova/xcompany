@@ -46,12 +46,34 @@
   .container
     max-width: 1440px  
 
+  
+  .advantages-row .advantages-row-box:first-child
+    width: 36%
+  .advantages-row .advantages-row-box:last-child
+    width: 36%   
+
+  .team-card__photo, .certificates-item__img
+    height: 400px
+
+  .team-card__body, .certificates-item__body
+    height: calc( 100% - 400px )   
+    
+
+  .about-project__img-max
+    height: 495px
+
+  .about-project__body .about-project__img
+    margin: 16px 0 0  
+
+  .project-image, .about-project__img, .patents-result__img
+    margin: 0 auto
+    max-width: 1200px
+
 @media only screen and (max-width: 1440px)
   h2, .h2
     font-size: 36px
 
-  h3, .h3
-    font-size: 24px
+  
 
   .h2-big
     font-size: 50px
@@ -107,7 +129,12 @@
   .innovation-section
     padding: 70px 0
 
+   
+
 @media only screen and (max-width: 1200px)
+  h3, .h3
+    font-size: 24px
+
   .sustainability-item__body
     padding: 20px
 
@@ -142,7 +169,7 @@
       height: calc( 100% - 440px )
 
   .advantages-section .box-text-title
-    margin: 24px 0 48px
+    margin: 24px 0 0
     max-width: none
 
 @media only screen and (max-width: 992px)
@@ -165,7 +192,19 @@
     font-size: 24px
 
   .home
-    padding: 175px 0 115px
+    padding: 0
+    height: 430px
+    display: flex
+    align-items: center
+    justify-content: center
+    // padding: 175px 0 115px
+
+  .home-catalog
+    height: 235px
+
+  .home-kitchen
+    height: 235px
+    padding: 0  
 
   .logo-animate
     max-width: 354px
@@ -219,7 +258,8 @@
     padding: 70px 0 350px
 
   .images-gallery .image-wrapper
-    height: 203px
+    height: 271px
+    width: 184px
 
   .innovation-content
     margin: 0
@@ -419,7 +459,8 @@
       padding: 24px 44px 24px 0
 
   .home-patents
-    padding: 142px 0
+    padding: 0
+    height: 325px
 
   .home-contacts h1
     margin: 0 0 48px
@@ -462,8 +503,7 @@
   .projects-result
     padding: 56px 0 64px
 
-  .home-project-page
-    padding: 77px 0
+ 
 
   .about-project-section
     padding: 64px 0 0
@@ -493,8 +533,7 @@
   .calculation-prices .box-text
     max-width: none
 
-  .home-about
-    padding: 97.5px 0
+  
 
   .about-greetings-content
     padding: 24px
@@ -541,6 +580,12 @@
     &__body
       height: calc( 100% - 404px )
 
+  .about-mission
+    padding: 64px 0 0 
+
+  .about-advantages, .about-system
+    padding: 0
+    margin: 48px 0
 
 @media only screen and (max-width: 768px)
   h1, .h1
@@ -610,8 +655,7 @@
   .btn-toggle-projects
     width: 100%
 
-  .home-projects
-    padding: 77px 0
+ 
 
   .map-wrapper
     height: 240px
@@ -639,9 +683,15 @@
   .partners-item
     height: 60px    
 
+  .video-wrapper
+    height: 500px
+
 @media only screen and (max-width: 576px)
   h4
     font-size: 18px
+
+  .p-120
+    padding: 48px 0  
 
   .form-footer
     flex-wrap: wrap
@@ -680,9 +730,6 @@
     line-height: 20px
     align-items: flex-start
 
-  .home-partners
-    padding: 77px 0
-
   .team-slider, .certificates-slider
     .slick-slide
       width: 314px
@@ -695,6 +742,49 @@
 
   .partners-item
     height: 55px
+
+  .video-wrapper
+    height: 329px  
+
+  .home
+    background: url('../img/home-bg-mobile.jpg') no-repeat center
+    background-size: cover  
+    &::before
+      background: radial-gradient(46.8% 26.74% at 50% 50%, #000000 0%, rgba(0, 0, 0, 0) 100%) 
+
+  .home-patents
+    background: url('../img/patents-home-bg-mobile.jpg') no-repeat center
+    background-size: cover  
+
+  .home-project
+    background: url('../img/outdoor-home-bg-mobile.jpg') no-repeat center
+    background-size: cover
+
+  .home-project-page
+    background: url('../img/project-home-bg-mobile.jpg') no-repeat center
+    background-size: cover  
+
+  .home-projects
+    background: url('../img/projects-home-bg-mobile.jpg') no-repeat center
+    background-size: cover
+
+  .home-partners
+    background: url('../img/partners-home-bg-mobile.jpg') no-repeat center
+    background-size: cover  
+
+  .home-package
+    background: url('../img/package-home-bg-mobile.jpg') no-repeat center
+    background-size: cover    
+
+  .home-about
+    background: url('../img/about-home-bg-mobile.jpg') no-repeat center
+    background-size: cover 
+
+  .home-kitchen
+    background: url('../img/kitchen-home-bg-mobile.jpg') no-repeat center
+    background-size: cover     
+
+    
 
 @media only screen and (max-width: 480px)
   h1, .h1
@@ -711,6 +801,9 @@
 
   .box-text-big
     font-size: 20px
+
+  .p-120
+    padding: 36px 0    
 
   .partners-item
     padding: 10px 15px
@@ -766,7 +859,14 @@
     &:last-child
       margin: 0
 
+  .images-gallery .image-wrapper
+    width: 120px
+    height: 200px    
+
 @media only screen and (max-width: 370px)
+  h1, .h1
+    font-size: 28px
+
   .logo
     max-width: 260px
 

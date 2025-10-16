@@ -492,3 +492,4 @@ $(function() {
     $tooltip.hide();
   });
 });
+

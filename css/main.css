@@ -140,7 +140,7 @@
 
 .image-wrapper {
   width: 100%;
-  margin: 0 24px 0 0;
+  margin: 0 16px 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -745,10 +745,10 @@
 }
 
 .about-greetings-content {
-  max-width: 1060px;
   width: 100%;
   margin: 0 auto;
   padding: 48px;
+  border: 1px solid #dbdbdb;
 }
 .about-greetings-content h4 {
   margin: 0 0 24px;
@@ -785,7 +785,7 @@
 }
 
 .about-advantages-item {
-  min-height: 732px;
+  min-height: 602px;
   flex: 1;
   border: 1px solid #dbdbdb;
   padding: 48px;
