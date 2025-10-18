@@ -1,5 +1,13 @@
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1830px) {
+  .menu li {
+    margin: 0 20px 0 0;
+  }
+  .menu li:last-child {
+    margin: 0;
+  }
+}
 @media only screen and (max-width: 1700px) {
   .logo {
     max-width: 180px;
@@ -36,8 +44,17 @@
     line-height: 1;
     padding: 10px 0;
   }
+  .sustainability-item {
+    min-height: 800px;
+  }
 }
 @media only screen and (max-width: 1600px) {
+  .phone {
+    margin: 0 16px 0 0;
+  }
+  .menu-header {
+    font-size: 12px;
+  }
   .home {
     padding: 300px 0 250px;
   }
@@ -68,6 +85,9 @@
   .project-image, .about-project__img, .patents-result__img {
     margin: 0 auto;
     max-width: 1200px;
+  }
+  .sustainability-item {
+    min-height: 700px;
   }
 }
 @media only screen and (max-width: 1440px) {
@@ -335,9 +355,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    z-index: 1;
-    opacity: 1;
   }
   .sustainability-item:hover {
     color: #1D2126;
@@ -804,6 +821,13 @@
     background: url("../img/kitchen-home-bg-mobile.jpg") no-repeat center;
     background-size: cover;
   }
+  .about-advantages, .about-system {
+    padding: 0;
+  }
+  .about-mission {
+    padding: 0;
+    margin: 48px 0;
+  }
 }
 @media only screen and (max-width: 480px) {
   h1, .h1 {
@@ -811,6 +835,11 @@
   }
 }
 @media only screen and (max-width: 420px) {
+  .btn-burger {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+  }
   h1, .h1 {
     font-size: 32px;
     letter-spacing: 0;
@@ -903,5 +932,25 @@
   }
   .category-section-item {
     padding: 64px 0 126px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .js-tab-content {
+    display: block;
+  }
+  .js-tab-content.active {
+    opacity: 1;
+  }
+  .js-tab-trigger.active {
+    color: #fff;
+  }
+  .js-tab-trigger.active .box-text {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .js-tab-trigger.no-active {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .js-tab-trigger.no-active .box-text {
+    color: rgba(255, 255, 255, 0.6);
   }
 }

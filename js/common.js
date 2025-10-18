@@ -1,3 +1,41 @@
+
+// показать карточку товара по наведению в зависимости от значениея data-tab
+$(document).ready(function () {
+  var hideTimeout;
+
+  $(".js-tab-trigger").on("mouseenter", function () {
+    if ($(window).width() >= 992) {
+      clearTimeout(hideTimeout); // отменяем возврат, если курсор снова на карточке
+      var $wrapper = $(this).parents('.sustainability-wrapper');
+      var id = $(this).attr('data-tab');
+      var $content = $wrapper.find('.js-tab-content[data-tab="' + id + '"]');
+
+      // скрываем sustainability-content один раз
+      $wrapper.find('.sustainability-content').stop(true, true).fadeOut(200);
+
+      // обновляем активные элементы
+      $wrapper.find('.js-tab-trigger').addClass('no-active').removeClass('active');
+      $(this).addClass('active').removeClass('no-active');
+
+      $wrapper.find('.js-tab-content').removeClass('active');
+      $content.addClass('active');
+    }
+  });
+
+  $(".sustainability-wrapper").on("mouseleave", function () {
+    if ($(window).width() >= 992) {
+      var $wrapper = $(this);
+
+      // при уходе мыши со всей области wrapper
+      hideTimeout = setTimeout(function () {
+        $wrapper.find('.js-tab-trigger').removeClass('no-active active');
+        $wrapper.find('.js-tab-content').removeClass('active');
+        $wrapper.find('.sustainability-content').stop(true, true).fadeIn(200);
+      }, 100);
+    }
+  });
+});
+
 // mouse animate
 (() => {
   const canvas = document.getElementById('mouseCanvas');
@@ -82,7 +120,7 @@
 
 // animate section scroll
 AOS.init({
-  duration: 1800, // скорость анимации
+  duration: 1000, // скорость анимации
   once: true     // анимация только 1 раз (не повторяется при скролле назад)
 });
 
@@ -364,7 +402,7 @@ $('.similar-slider').slick({
         variableWidth: true
       }
     }
-    
+
   ]
 });
 
@@ -381,7 +419,7 @@ $('.team-slider').slick({
         variableWidth: true
       }
     }
-    
+
   ]
 });
 
@@ -408,7 +446,7 @@ $('.certificates-slider').slick({
 });
 
 // map tooltip svg
-$(function() {
+$(function () {
   // Если тултипа нет в DOM, создаём и добавляем в body
   var $tooltip = $('.map-tooltip');
   if ($tooltip.length === 0) {
@@ -445,7 +483,7 @@ $(function() {
   }
 
   // Наведение
-  $areas.on('mouseenter', function(e) {
+  $areas.on('mouseenter', function (e) {
     var $this = $(this);
     var title = $this.attr('data-title') || $this.attr('title') || 'Без названия';
     // debug: покажем что нашли
@@ -462,18 +500,18 @@ $(function() {
   });
 
   // Движение мыши
-  $areas.on('mousemove', function(e) {
+  $areas.on('mousemove', function (e) {
     placeTooltip($tooltip, e.pageX, e.pageY);
   });
 
   // Уход
-  $areas.on('mouseleave', function(e) {
+  $areas.on('mouseleave', function (e) {
     $(this).removeClass('highlight');
     $tooltip.stop(true, true).fadeOut(80);
   });
 
   // На touch-устройствах: показываем по touchstart, скрываем по touchend
-  $areas.on('touchstart', function(e) {
+  $areas.on('touchstart', function (e) {
     var $this = $(this);
     var title = $this.attr('data-title') || 'Без названия';
     $this.addClass('highlight');
@@ -487,9 +525,10 @@ $(function() {
     e.preventDefault();
   });
 
-  $(document).on('touchend touchcancel', function() {
+  $(document).on('touchend touchcancel', function () {
     $areas.removeClass('highlight');
     $tooltip.hide();
   });
 });
+
 

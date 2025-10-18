@@ -27,8 +27,6 @@
   width: 100%
   animation: float 3.5s ease-in-out infinite
   @include d-flex
-  
-
 
 @keyframes float
   0%
@@ -290,6 +288,18 @@
   position: relative
   z-index: 1
 
+.sustainability-img__bg
+  z-index: -1
+  position: absolute
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  object-fit: cover
+  flex: 3  
+  opacity: 0
+  transition: .3s ease
+
 .sustainability-content
   position: absolute
   right: 0
@@ -313,35 +323,38 @@
   border-bottom: 1px solid $gray-stroke
   position: relative
   z-index: 1
-  &:hover
-    color: $white
-    .box-text
-      color: $white-60
-    .sustainability-item
-      &__img
-        opacity: 1
-  &:nth-child(2)
-    
-    &:hover
-      color: $dark
-      .box-text
-        color: $dark-60      
+  cursor: pointer
+  // &:hover
+  //   color: $white
+  //   .box-text
+  //     color: $white-60
+  //   .sustainability-item
+  //     &__img
+  //       opacity: 1
+  // &:nth-child(2)
+
+  //   &:hover
+  //     color: $dark
+  //     .box-text
+  //       color: $dark-60      
   &:last-child
+    background: #fff
     border-right: none
-    &:hover
-      color: $dark
-      .box-text
-        color: $dark-60
+    // &:hover
+    //   color: $dark
+    //   .box-text
+    //     color: $dark-60
   &__img
-    opacity: 0
-    position: absolute
-    left: 0
-    top: 0
+    // opacity: 0
+    // position: absolute
+    // left: 0
+    // top: 0
     width: 100%
-    height: 100%
-    z-index: -1
-    transition: .3s ease
-    @include d-flex
+    // height: 100%
+    // z-index: -1
+    // transition: .3s ease
+    // @include d-flex
+    display: none
     img
       width: 100%
       height: 100%
@@ -356,6 +369,22 @@
       font-weight: 500
   .box-text
     margin: 16px 0 0
+
+// .js-tab-content
+//   display: block
+
+// .js-tab-content.active
+//   opacity: 1
+
+// .js-tab-trigger.active
+//   color: #fff
+//   .box-text
+//     color: $white-60
+
+// .js-tab-trigger.no-active
+//   color: $white-60  
+//   .box-text
+//     color: $white-60
 
 // catalog page
 .home-catalog
@@ -442,7 +471,6 @@
     height: 100%
     object-fit: cover
     filter: grayscale(100%)
-  
 
 .contacts-box
   margin: 0 0 24px
@@ -606,7 +634,7 @@
   // max-width: 1060px
   width: 100%
   margin: 0 auto
-  padding: 48px 
+  padding: 48px
   border: 1px solid $gray-stroke
   h4
     margin: 0 0 24px
@@ -766,7 +794,7 @@
       transition: .3s ease
     &:hover
       &::before
-        opacity: 1  
+        opacity: 1
     img
       width: 100%
       height: 100%
@@ -774,7 +802,7 @@
       filter: grayscale(100%)
   &__body
     width: 100%
-    height: calc( 100% - 485px )    
+    height: calc( 100% - 485px )
     padding: 24px 0 0
   h4
-    margin: 0  
+    margin: 0

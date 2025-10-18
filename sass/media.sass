@@ -1,6 +1,12 @@
 /*==========  Desktop First  ==========*/
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1830px)
+  .menu li
+    margin: 0 20px 0 0
+    &:last-child
+      margin: 0
+
 @media only screen and (max-width: 1700px)
   .logo
     max-width: 180px
@@ -36,44 +42,52 @@
         line-height: 1
         padding: 10px 0
 
+  .sustainability-item
+    min-height: 800px      
+
 @media only screen and (max-width: 1600px)
+  .phone
+    margin: 0 16px 0 0
+
+  .menu-header
+    font-size: 12px
+
   .home
     padding: 300px 0 250px
 
   .video-wrapper
-    height: 700px  
+    height: 700px
 
   .container
-    max-width: 1440px  
+    max-width: 1440px
 
-  
   .advantages-row .advantages-row-box:first-child
     width: 36%
   .advantages-row .advantages-row-box:last-child
-    width: 36%   
+    width: 36%
 
   .team-card__photo, .certificates-item__img
     height: 400px
 
   .team-card__body, .certificates-item__body
-    height: calc( 100% - 400px )   
-    
+    height: calc( 100% - 400px )
 
   .about-project__img-max
     height: 495px
 
   .about-project__body .about-project__img
-    margin: 16px 0 0  
+    margin: 16px 0 0
 
   .project-image, .about-project__img, .patents-result__img
     margin: 0 auto
     max-width: 1200px
 
+  .sustainability-item
+    min-height: 700px  
+
 @media only screen and (max-width: 1440px)
   h2, .h2
     font-size: 36px
-
-  
 
   .h2-big
     font-size: 50px
@@ -108,8 +122,6 @@
   body
     padding: 84px 0 0
 
-  
-
   .logo
     max-width: 296px
 
@@ -128,8 +140,6 @@
 
   .innovation-section
     padding: 70px 0
-
-   
 
 @media only screen and (max-width: 1200px)
   h3, .h3
@@ -204,7 +214,7 @@
 
   .home-kitchen
     height: 235px
-    padding: 0  
+    padding: 0
 
   .logo-animate
     max-width: 354px
@@ -328,9 +338,9 @@
       display: flex
       align-items: center
       justify-content: center
-      position: relative
-      z-index: 1
-      opacity: 1
+      // position: relative
+      // z-index: 1
+      // opacity: 1
     &:hover
       color: #1D2126
       .box-text
@@ -338,7 +348,7 @@
     &:nth-child(2)
       color: #1D2126
       .box-text
-        color: rgba(#192939, 0.8) 
+        color: rgba(#192939, 0.8)
     &__body
       padding: 32px 24px
     h3
@@ -360,7 +370,7 @@
     margin: 16px 0 0
 
   .cooperation-image
-    margin: 16px auto 
+    margin: 16px auto
 
   .callback-section__image
     border: none
@@ -503,8 +513,6 @@
   .projects-result
     padding: 56px 0 64px
 
- 
-
   .about-project-section
     padding: 64px 0 0
 
@@ -532,8 +540,6 @@
 
   .calculation-prices .box-text
     max-width: none
-
-  
 
   .about-greetings-content
     padding: 24px
@@ -566,7 +572,7 @@
     &__photo
       height: 300px
     &__body
-      height: calc( 100% - 300px )  
+      height: calc( 100% - 300px )
 
   .map-delivery .box-text
     max-width: none
@@ -575,13 +581,13 @@
       display: none
 
   .certificates-item
-    &__img   
+    &__img
       height: 404px
     &__body
       height: calc( 100% - 404px )
 
   .about-mission
-    padding: 64px 0 0 
+    padding: 64px 0 0
 
   .about-advantages, .about-system
     padding: 0
@@ -655,8 +661,6 @@
   .btn-toggle-projects
     width: 100%
 
- 
-
   .map-wrapper
     height: 240px
     margin: 48px 0
@@ -681,7 +685,7 @@
       width: 384px
 
   .partners-item
-    height: 60px    
+    height: 60px
 
   .video-wrapper
     height: 500px
@@ -691,7 +695,7 @@
     font-size: 18px
 
   .p-120
-    padding: 48px 0  
+    padding: 48px 0
 
   .form-footer
     flex-wrap: wrap
@@ -744,17 +748,17 @@
     height: 55px
 
   .video-wrapper
-    height: 329px  
+    height: 329px
 
   .home
     background: url('../img/home-bg-mobile.jpg') no-repeat center
-    background-size: cover  
+    background-size: cover
     &::before
-      background: radial-gradient(46.8% 26.74% at 50% 50%, #000000 0%, rgba(0, 0, 0, 0) 100%) 
+      background: radial-gradient(46.8% 26.74% at 50% 50%, #000000 0%, rgba(0, 0, 0, 0) 100%)
 
   .home-patents
     background: url('../img/patents-home-bg-mobile.jpg') no-repeat center
-    background-size: cover  
+    background-size: cover
 
   .home-project
     background: url('../img/outdoor-home-bg-mobile.jpg') no-repeat center
@@ -762,7 +766,7 @@
 
   .home-project-page
     background: url('../img/project-home-bg-mobile.jpg') no-repeat center
-    background-size: cover  
+    background-size: cover
 
   .home-projects
     background: url('../img/projects-home-bg-mobile.jpg') no-repeat center
@@ -770,27 +774,37 @@
 
   .home-partners
     background: url('../img/partners-home-bg-mobile.jpg') no-repeat center
-    background-size: cover  
+    background-size: cover
 
   .home-package
     background: url('../img/package-home-bg-mobile.jpg') no-repeat center
-    background-size: cover    
+    background-size: cover
 
   .home-about
     background: url('../img/about-home-bg-mobile.jpg') no-repeat center
-    background-size: cover 
+    background-size: cover
 
   .home-kitchen
     background: url('../img/kitchen-home-bg-mobile.jpg') no-repeat center
-    background-size: cover     
+    background-size: cover
 
-    
+  .about-advantages, .about-system
+    padding: 0
+
+  .about-mission
+    padding: 0
+    margin: 48px 0
 
 @media only screen and (max-width: 480px)
   h1, .h1
     font-size: 36px
 
 @media only screen and (max-width: 420px)
+  .btn-burger
+    width: 42px
+    height: 42px
+    min-width: 42px
+
   h1, .h1
     font-size: 32px
     letter-spacing: 0
@@ -803,7 +817,7 @@
     font-size: 20px
 
   .p-120
-    padding: 36px 0    
+    padding: 36px 0
 
   .partners-item
     padding: 10px 15px
@@ -861,7 +875,7 @@
 
   .images-gallery .image-wrapper
     width: 120px
-    height: 200px    
+    height: 200px
 
 @media only screen and (max-width: 370px)
   h1, .h1
@@ -881,3 +895,20 @@
 
   .category-section-item
     padding: 64px 0 126px
+
+@media only screen and (min-width: 992px)
+  .js-tab-content
+    display: block
+
+  .js-tab-content.active
+    opacity: 1
+
+  .js-tab-trigger.active
+    color: #fff
+    .box-text
+      color: rgba(#fff, 0.6)
+
+  .js-tab-trigger.no-active
+    color: rgba(#fff, 0.6)
+    .box-text
+      color: rgba(#fff, 0.6)
