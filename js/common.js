@@ -3,6 +3,7 @@
 $(document).ready(function () {
   var hideTimeout;
 
+  // Наведение на карточку
   $(".js-tab-trigger").on("mouseenter", function () {
     if ($(window).width() >= 992) {
       clearTimeout(hideTimeout); // отменяем возврат, если курсор снова на карточке
@@ -22,11 +23,21 @@ $(document).ready(function () {
     }
   });
 
+  // Наведение на блок по умолчанию (возврат состояния)
+  $('.sustainability-item-default').hover(function () {
+    if ($(window).width() >= 992) {
+      var $wrapper = $(this).parents('.sustainability-wrapper');
+      $wrapper.find('.sustainability-content').stop(true, true).fadeIn(200);
+      $wrapper.find('.js-tab-trigger').removeClass('active no-active');
+      $wrapper.find('.js-tab-content').removeClass('active');
+    }
+  });
+
+  // Уход мыши со всей области wrapper
   $(".sustainability-wrapper").on("mouseleave", function () {
     if ($(window).width() >= 992) {
       var $wrapper = $(this);
 
-      // при уходе мыши со всей области wrapper
       hideTimeout = setTimeout(function () {
         $wrapper.find('.js-tab-trigger').removeClass('no-active active');
         $wrapper.find('.js-tab-content').removeClass('active');
@@ -35,6 +46,7 @@ $(document).ready(function () {
     }
   });
 });
+
 
 // mouse animate
 (() => {
@@ -251,50 +263,52 @@ $(function () {
 $(document).ready(function () {
 
   function splitLettersKeepingSpaces($el) {
-    // не делаем дважды
-    if ($el.data('letters-split')) return;
-    const nodes = $el.contents().toArray();
-    $el.empty();
+  if ($el.data('letters-split')) return;
+  const nodes = $el.contents().toArray();
+  $el.empty();
 
-    nodes.forEach(node => {
-      if (node.nodeType === Node.TEXT_NODE) {
-        const text = node.nodeValue;
-        for (let i = 0; i < text.length; i++) {
-          const ch = text[i];
-          if (ch === ' ') {
-            // обычный пробел — добавляем текстовый узел, чтобы разрешить переносы
-            $el.append(document.createTextNode(' '));
-          } else if (ch === '\u00A0') {
-            // если в исходнике был &nbsp;
-            $el.append(document.createTextNode('\u00A0'));
-          } else if (ch === '\n' || ch === '\r') {
-            // игнорируем переводы строк в исходном тексте
-          } else {
-            // буква — оборачиваем в span
-            const $span = $('<span>').text(ch);
-            $el.append($span);
-          }
-        }
-      } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName.toLowerCase() === 'br') {
-        $el.append('<br>');
-      } else {
-        // на всякий случай: если внутри были другие элементы — берем их текст
-        const txt = $(node).text();
-        for (let i = 0; i < txt.length; i++) {
-          const ch = txt[i];
-          if (ch === ' ') {
-            $el.append(document.createTextNode(' '));
-          } else if (ch === '\u00A0') {
-            $el.append(document.createTextNode('\u00A0'));
-          } else {
-            $el.append($('<span>').text(ch));
-          }
+  nodes.forEach(node => {
+    if (node.nodeType === Node.TEXT_NODE) {
+      const text = node.nodeValue;
+      for (let i = 0; i < text.length; i++) {
+        const ch = text[i];
+        if (ch === ' ') {
+          $el.append(document.createTextNode(' '));
+        } else if (ch === '\u00A0') {
+          $el.append(document.createTextNode('\u00A0'));
+        } else if (ch === '\n' || ch === '\r') {
+          // ignore
+        } else {
+          const $span = $('<span>').text(ch);
+          $el.append($span);
         }
       }
-    });
+    } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName.toLowerCase() === 'br') {
+      $el.append('<br>');
+    } else {
+      const txt = $(node).text();
+      for (let i = 0; i < txt.length; i++) {
+        const ch = txt[i];
+        if (ch === ' ') {
+          $el.append(document.createTextNode(' '));
+        } else if (ch === '\u00A0') {
+          $el.append(document.createTextNode('\u00A0'));
+        } else {
+          $el.append($('<span>').text(ch));
+        }
+      }
+    }
+  });
 
-    $el.data('letters-split', true);
-  }
+  // Отмечаем что сплит выполнен
+  $el.data('letters-split', true);
+
+  // ВАЖНО: показываем контейнер сразу после разбивки, 
+  // чтобы не было мелькания исходного текста.
+  // Буквы внутри при этом остаются hidden (opacity:0) и проявятся при анимации.
+  $el.addClass('ready');
+}
+
 
   function animateLettersOnce($el) {
     if ($el.data('animated')) return; // один раз по умолчанию

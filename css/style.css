@@ -763,6 +763,7 @@ h4, .h4 {
   text-align: center;
   white-space: normal;
   overflow: hidden;
+  visibility: visible;
 }
 .anim-letters span {
   display: inline;
@@ -777,6 +778,14 @@ h4, .h4 {
 .anim-letters span.visible {
   opacity: 1;
   transition: opacity 1.4s ease-out;
+}
+
+.js .anim-letters {
+  visibility: hidden;
+}
+
+.anim-letters.ready {
+  visibility: visible;
 }
 
 .accordion {

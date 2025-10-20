@@ -146,6 +146,9 @@
   .innovation-section {
     padding: 70px 0;
   }
+  .home-contacts {
+    height: auto;
+  }
 }
 @media only screen and (max-width: 1200px) {
   h3, .h3 {
@@ -806,7 +809,7 @@
     background-size: cover;
   }
   .home-partners {
-    background: url("../img/partners-home-bg-mobile.jpg") no-repeat center;
+    background: url("../img/partners-home-bg.jpg") no-repeat center;
     background-size: cover;
   }
   .home-package {

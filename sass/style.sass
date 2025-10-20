@@ -166,7 +166,6 @@ textarea
   letter-spacing: 0.3px
   padding: 0
 
-
 .social-radio-item
   flex: 1
   margin: 0 16px 16px 0
@@ -212,7 +211,7 @@ textarea
 
 .radio-item
   flex: none
-  width: fit-content    
+  width: fit-content
 
 button, .btn
   outline: none
@@ -352,19 +351,19 @@ h4, .h4
   align-items: center
   flex-wrap: wrap
   h2
-    width: fit-content  
+    width: fit-content
 
 .font-text
   font-family: $font
 
 .p-0
-  padding: 0  
+  padding: 0
 
 .p-120
   padding: 120px 0
 
 .mb-24
-  margin-bottom: 24px  
+  margin-bottom: 24px
 
 .mb-32
   margin-bottom: 32px
@@ -375,11 +374,11 @@ h4, .h4
 .mb-64
   margin-bottom: 64px
 
-.mb-120 
-  margin-bottom: 120px 
+.mb-120
+  margin-bottom: 120px
 
 .m-120
-  margin: 120px 0   
+  margin: 120px 0
 
 .text-uppercase
   text-transform: uppercase
@@ -389,7 +388,7 @@ h4, .h4
   color: $white
 
 .bg-white
-  background: #fff 
+  background: #fff
 
 .bg-light-gray
   background: $light-gray
@@ -529,7 +528,7 @@ h4, .h4
   display: flex
   align-items: center
   justify-content: flex-end
-  margin: 0 0 0 auto  
+  margin: 0 0 0 auto
 
 .slick-arrow
   background: $dark
@@ -545,16 +544,16 @@ h4, .h4
   opacity: 1
   box-sizing: border-box
   padding: 10px
-  @include d-flex  
+  @include d-flex
   &:last-child
     margin: 0
   &:hover
     background: #fff
-    fill: $dark  
+    fill: $dark
   &:focus
     background: $dark-60
     border-color: $dark-60
-    fill: #fff  
+    fill: #fff
 
 .slider-stretch
   overflow: hidden
@@ -565,9 +564,7 @@ h4, .h4
     align-items: stretch
   .slick-slide
     height: auto
-    padding: 0 24px  
-
-
+    padding: 0 24px
 
 //checkbox my
 .label-checkbox
@@ -608,6 +605,7 @@ h4, .h4
   text-align: center
   white-space: normal
   overflow: hidden
+  visibility: visible
 
   span
     display: inline
@@ -622,6 +620,12 @@ h4, .h4
   span.visible
     opacity: 1
     transition: opacity 1.4s ease-out // быстрее 2-й фазы //
+
+.js .anim-letters
+  visibility: hidden
+
+.anim-letters.ready
+  visibility: visible
 
 // accordion
 .accordion
@@ -638,7 +642,7 @@ h4, .h4
   border: 1px solid $gray-stroke
   transition: box-shadow 0.3s ease
   border-radius: 0
-  padding: 0 
+  padding: 0
   &:last-child
     border-radius: 0
   &:first-child
@@ -653,7 +657,7 @@ h4, .h4
   display: flex
   justify-content: space-between
   align-items: center
-  padding: 48px 
+  padding: 48px
 
   &:focus
     box-shadow: none
@@ -729,7 +733,7 @@ h4, .h4
       padding: 0
       color: $dark
       &:hover
-        color: $white-60  
+        color: $white-60
       &:after
         content: '/'
         margin: 0 10px
@@ -739,7 +743,7 @@ h4, .h4
     a
       color: #fff
       &:hover
-        color: $white-60  
+        color: $white-60
 
 .breadcrumb-item+.breadcrumb-item
   padding: 0
@@ -747,7 +751,4 @@ h4, .h4
     display: none
 
 .breadcrumb-item.active
-  color: $white-60  
-
-
-  
+  color: $white-60

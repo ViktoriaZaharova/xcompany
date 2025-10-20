@@ -505,6 +505,9 @@
   margin: 0 0 32px;
 }
 
+.home-contacts {
+  height: 100vh;
+}
 .home-contacts h1 {
   margin: 0 0 auto;
 }

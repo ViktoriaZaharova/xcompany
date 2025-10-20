@@ -10,6 +10,17 @@
   <meta property="og:image" content="path/to/image.jpg">
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 
+  <script>
+    // Добавляем класс "js" на <html>, если JS включен.
+    // Важно — выполняется до первого рендера, чтобы CSS успел среагировать.
+    (function () {
+      try {
+        document.documentElement.classList.remove('no-js');
+      } catch (e) { }
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+
   <!-- add plugins css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/slick.css">
@@ -293,7 +304,9 @@
                 </div>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
                   <div class="accordion-body">
-                    <p>Мы работаем в основном с дизайнерами, у которых уже есть готовый проект, и которые ищут исполнителя. Но если вы хотите предложить свою кандидатуру в качестве нашего штатного дизайнера - присылайте свое портфолио, мы всегда готовы рассмотреть новых талантливых соискателей!</p>
+                    <p>Мы работаем в основном с дизайнерами, у которых уже есть готовый проект, и которые ищут
+                      исполнителя. Но если вы хотите предложить свою кандидатуру в качестве нашего штатного дизайнера -
+                      присылайте свое портфолио, мы всегда готовы рассмотреть новых талантливых соискателей!</p>
                   </div>
                 </div>
               </div>
@@ -301,7 +314,7 @@
             </div>
 
             <div class="accordion">
-             
+
 
               <div class="accordion-item">
                 <div class="accordion-header" id="headingTwo">

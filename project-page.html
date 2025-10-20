@@ -9,7 +9,17 @@
 
   <meta property="og:image" content="path/to/image.jpg">
   <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-
+<script>
+    // Добавляем класс "js" на <html>, если JS включен.
+    // Важно — выполняется до первого рендера, чтобы CSS успел среагировать.
+    (function () {
+      try {
+        document.documentElement.classList.remove('no-js');
+      } catch (e) { }
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+  
   <!-- add plugins css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/slick.css">
