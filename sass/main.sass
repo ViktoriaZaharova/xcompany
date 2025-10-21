@@ -21,6 +21,13 @@
     position: relative
     z-index: 3
 
+.home-nogradient
+  &::before
+    // display: none
+    background: $dark
+    opacity: 0.6
+
+
 // .logo-animate
 //   margin: auto
 //   max-width: 507px
@@ -397,8 +404,8 @@
   background: url('../img/catalog-home-bg.jpg') no-repeat center
   background-size: cover
   padding: 204px 0
-  &::before
-    background: radial-gradient(50% 50% at 50% 50%, #1D2126 0%, rgba(29, 33, 38, 0.4) 100%)
+  // &::before
+  //   background: radial-gradient(50% 50% at 50% 50%, #1D2126 0%, rgba(29, 33, 38, 0.4) 100%)
 
 // home-page
 .home-page

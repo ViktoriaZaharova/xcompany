@@ -21,6 +21,11 @@
   z-index: 3;
 }
 
+.home-nogradient::before {
+  background: #1D2126;
+  opacity: 0.6;
+}
+
 .logo-page {
   margin: auto;
   max-width: 507px;
@@ -419,9 +424,6 @@
   background: url("../img/catalog-home-bg.jpg") no-repeat center;
   background-size: cover;
   padding: 204px 0;
-}
-.home-catalog::before {
-  background: radial-gradient(50% 50% at 50% 50%, #1D2126 0%, rgba(29, 33, 38, 0.4) 100%);
 }
 
 .home-page {
