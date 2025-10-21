@@ -43,7 +43,7 @@
         padding: 10px 0
 
   .sustainability-item
-    min-height: 800px      
+    min-height: 800px
 
 @media only screen and (max-width: 1600px)
   .phone
@@ -83,7 +83,10 @@
     max-width: 1200px
 
   .sustainability-item
-    min-height: 700px  
+    min-height: 700px
+
+  .mb-120
+    margin-bottom: 64px  
 
 @media only screen and (max-width: 1440px)
   h2, .h2
@@ -142,7 +145,7 @@
     padding: 70px 0
 
   .home-contacts
-    height: auto   
+    height: auto
 
 @media only screen and (max-width: 1200px)
   h3, .h3
@@ -184,8 +187,6 @@
   .advantages-section .box-text-title
     margin: 24px 0 0
     max-width: none
-
-   
 
 @media only screen and (max-width: 992px)
   h1, .h1
@@ -907,6 +908,20 @@
 
   .js-tab-content.active
     opacity: 1
+
+  .js-tab-trigger.active, .js-tab-trigger.no-active
+    .sustainability-item__body
+      position: relative
+      z-index: 1
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(29,33,38,1) 80%)
 
   .js-tab-trigger.active
     color: #fff
