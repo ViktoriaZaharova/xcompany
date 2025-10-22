@@ -545,4 +545,20 @@ $(function () {
   });
 });
 
+// preloader
+$(document).ready(function() {
+  $('body').addClass('no-scroll'); // блокируем скролл
+
+  // показываем прелоадер минимум 2 секунды
+  setTimeout(function() {
+    $('.preloader').addClass('hide'); // плавное скрытие
+
+    // удаляем после анимации
+    setTimeout(function() {
+      $('.preloader').remove();
+      $('body').removeClass('no-scroll'); // возвращаем скролл
+    }, 600); // совпадает с transition: 0.6s
+  }, 2000);
+});
+
 
