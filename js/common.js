@@ -48,9 +48,10 @@ $(document).ready(function () {
 });
 
 
-// mouse animate
-(() => {
-  const canvas = document.getElementById('mouseCanvas');
+
+// mouse animate (smooth Centersvet-style)
+$(function () {
+  const canvas = $('#mouseCanvas')[0];
   const ctx = canvas.getContext('2d', { alpha: true });
 
   let W = window.innerWidth;
@@ -61,73 +62,76 @@ $(document).ready(function () {
     DPR = window.devicePixelRatio || 1;
     W = window.innerWidth;
     H = window.innerHeight;
-    canvas.style.width = W + 'px';
-    canvas.style.height = H + 'px';
+    $(canvas).css({ width: W, height: H });
     canvas.width = Math.round(W * DPR);
     canvas.height = Math.round(H * DPR);
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   }
   resize();
-  window.addEventListener('resize', resize);
+  $(window).on('resize', resize);
 
-  const MAX_POINTS = 250;      // меньше точек — быстрее исчезает
-  const CONNECT_DIST = 200;   // расстояние соединения
-  const FADE_STEP = 0.06;     // очень быстро исчезает
-  const LINE_WIDTH = 0.1;     // ещё тоньше
+  const TRAIL_LENGTH = 20;   // длина плавного следа
+  const LINE_WIDTH = .8;      // толщина линии
+  const COLOR = 'rgba(29,33,38,1)'; // цвет линии
 
-  let points = [];
+  const trail = [];
+  let targetX = W / 2;
+  let targetY = H / 2;
+  let smoothX = targetX;
+  let smoothY = targetY;
+  const easing = 0.25; // плавность догоняющего движения
 
-  window.addEventListener('pointermove', e => {
-    points.push({ x: e.clientX, y: e.clientY, life: 1 });
-    if (points.length > MAX_POINTS) points.shift();
+  $(window).on('pointermove', function (e) {
+    targetX = e.clientX;
+    targetY = e.clientY;
   });
 
   function draw() {
     requestAnimationFrame(draw);
     ctx.clearRect(0, 0, W, H);
 
-    // отключаем любые тени
-    ctx.shadowBlur = 0;
-    ctx.shadowColor = "transparent";
+    // Плавное движение “хвоста”
+    smoothX += (targetX - smoothX) * easing;
+    smoothY += (targetY - smoothY) * easing;
 
-    ctx.lineWidth = LINE_WIDTH;
-    ctx.lineCap = 'round';
-    ctx.lineJoin = 'round';
+    // добавляем новые точки
+    trail.push({ x: smoothX, y: smoothY });
+    if (trail.length > TRAIL_LENGTH) trail.shift();
 
-    // линии
-    for (let i = 0; i < points.length; i++) {
-      const p = points[i];
-      for (let j = i + 1; j < points.length; j++) {
-        const q = points[j];
-        const dx = p.x - q.x;
-        const dy = p.y - q.y;
-        const dist = Math.hypot(dx, dy);
-        if (dist < CONNECT_DIST) {
-          const alpha = (1 - dist / CONNECT_DIST) * 0.5 * p.life;
-          ctx.strokeStyle = `rgba(29,33,38,${alpha})`;
-          ctx.beginPath();
-          ctx.moveTo(p.x, p.y);
-          ctx.lineTo(q.x, q.y);
-          ctx.stroke();
-        }
-      }
-    }
-
-    // точки
-    for (let k = 0; k < points.length; k++) {
-      const p = points[k];
+    // Рисуем мягкую линию
+    if (trail.length > 1) {
       ctx.beginPath();
-      ctx.arc(p.x, p.y, 0.5, 0, Math.PI * 2); // микроточки
-      ctx.fillStyle = `rgba(29,33,38,${Math.min(1, p.life)})`;
-      ctx.fill();
-      p.life -= FADE_STEP;
-    }
+      ctx.moveTo(trail[0].x, trail[0].y);
+      for (let i = 1; i < trail.length - 2; i++) {
+        const xc = (trail[i].x + trail[i + 1].x) / 2;
+        const yc = (trail[i].y + trail[i + 1].y) / 2;
+        ctx.quadraticCurveTo(trail[i].x, trail[i].y, xc, yc);
+      }
+      ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y);
 
-    points = points.filter(pt => pt.life > 0);
+      // плавное исчезание — прозрачность уменьшается ближе к мышке
+      const gradient = ctx.createLinearGradient(
+        trail[0].x,
+        trail[0].y,
+        trail[trail.length - 1].x,
+        trail[trail.length - 1].y
+      );
+      gradient.addColorStop(0, 'rgba(29,33,38,0)');
+      gradient.addColorStop(0.2, 'rgba(29,33,38,0.3)');
+      gradient.addColorStop(0.6, 'rgba(29,33,38,0.8)');
+      gradient.addColorStop(1, 'rgba(29,33,38,1)');
+
+      ctx.strokeStyle = gradient;
+      ctx.lineWidth = LINE_WIDTH;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+      ctx.shadowBlur = 0;
+      ctx.stroke();
+    }
   }
 
   draw();
-})();
+});
 // mouse animate end
 
 // animate section scroll
